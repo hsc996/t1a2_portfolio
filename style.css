@@ -1,0 +1,103 @@
+:root {
+    --cerulean: #0081a7ff;
+    --verdigris: #00afb9ff;
+    --light-yellow: rgb(255, 252, 235);
+    --light-orange: rgb(244, 188, 135);
+    --bittersweet: #f07167ff;
+
+font-family: "Rethink Sans", san-serif;
+}
+
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--light-yellow);
+}
+
+main {
+    min-height: 95dvh;
+    width: 50dvw;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: var(--light-yellow);
+    height: 5dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: center; */
+}
+
+
+header h1 {
+    font-size: 45px;
+    padding: 0.75em;
+    display: flex;
+    flex-direction:column;
+    justify-content: left;
+}
+
+header h2 {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+
+
+}
+.dropdown button {
+    background-color: var(--bittersweet);
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 1em;
+}
+.dropdown a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    font-size: 1rem;
+
+}
+.dropdown > .content {
+    position: absolute;
+    display: none;
+    background-color: var(--bittersweet);
+    min-width: 6dvw;
+    min-height: 100dvh;
+
+}
+.dropdown:hover > .content {
+    display: block;
+}
+.dropdown:hover button {
+    background-color: rgb(255, 41, 80);
+}
+
+.dropdown a:hover {
+    background-color: rgb(255, 41, 80);
+}
+
+
+footer {
+    background-color: var(--bittersweet);
+    height: 4dvh;
+    width: 100dvw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
