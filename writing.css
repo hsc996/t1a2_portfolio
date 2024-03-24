@@ -1,13 +1,12 @@
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
-    --light-yellow: rgb(255, 252, 235);
-    --light-orange: rgb(244, 188, 135);
+    --light-yellow: #fdfcdcff;
+    --light-orange: #fed9b7ff;
     --bittersweet: #f07167ff;
 
 font-family: "Rethink Sans", san-serif;
 }
-
 
 * {
     margin: 0;
@@ -35,7 +34,6 @@ main * {
 }
 
 .mainheader{
-    background-color: var(--light-yellow);
     height: 7dvh;
     width: 100dvw;
     display: flex;
@@ -70,6 +68,7 @@ header h3 {
     background: var(--bittersweet);
     padding: 0 25px;
     transition: 0.3s;
+    opacity: 85%;
 }
 
 .navlogo > a {
@@ -105,7 +104,7 @@ header h3 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -183,7 +182,7 @@ header h3 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
     .hamburger,
     .toggle-menu {
     display: block;

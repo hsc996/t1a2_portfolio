@@ -1,8 +1,8 @@
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
-    --light-yellow: rgb(255, 252, 235);
-    --light-orange: rgb(244, 188, 135);
+    --light-yellow: #fdfcdcff;
+    --light-orange: #fed9b7ff;
     --bittersweet: #f07167ff;
 
 font-family: "Rethink Sans", san-serif;
@@ -66,6 +66,7 @@ header h1 {
     align-items: center;
     z-index: 1;
     transition: 0.5s;
+    opacity: 85%;
 }
 
 .menu li {
@@ -77,7 +78,7 @@ header h1 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -155,7 +156,7 @@ header h1 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -178,7 +179,8 @@ header h1 {
     .menu li {
         width: 100%;
     }
-    .menu li a, .menu li a:hover {
+    .menu li a,
+    .menu li a:hover {
         padding: 30px;
         font-size: 18px;
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -196,7 +198,7 @@ header h1 {
     padding: 1em;
     background-color: var(--verdigris);
     border-radius: 2em;
-    box-shadow: 0.3em 0.3em rgba(0, 128, 128, 0.19)
+    box-shadow: 0.5em 0.5em rgba(47, 86, 86, 0.502)
 }
     
 .projectPreview {
@@ -204,13 +206,20 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap; 
 }
 
 .projectPreview > a >img:hover {
     border-radius: 0;
+    padding: 15px 30px 15px 30px;
+}
 
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {

@@ -1,8 +1,8 @@
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
-    --light-yellow: rgb(255, 252, 235);
-    --light-orange: rgb(244, 188, 135);
+    --light-yellow: #fdfcdcff;
+    --light-orange: #fed9b7ff;
     --bittersweet: #f07167ff;
 
 font-family: "Rethink Sans", san-serif;
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    min-height:80dvh;
+    min-height:87dvh;
     width: 70dvw;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ header h2 {
     background: var(--bittersweet);
     padding: 0 25px;
     transition: 0.3s;
+    opacity: 85%;
 }
 
 .navlogo > a {
@@ -98,7 +99,7 @@ header h2 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -176,7 +177,7 @@ header h2 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -206,12 +207,38 @@ header h2 {
     }
 }
 
- section {
+ .contactinfo {
     display: flex;
     flex-direction: column;
     justify-content: left;
     margin-top: 20dvh;
  }
+
+ main > .iconcontentrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+main > .iconcontentrow > .iconpreview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconpreview > a > img {
+    max-width: 65dvw;
+
+    transition: 1s;
+    height: 5dvh;
+    width: auto;
+    margin: -1em;
+    border-radius: 2em;
+    box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502)
+}
 
 footer {
     background-color: var(--bittersweet);

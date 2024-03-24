@@ -1,8 +1,8 @@
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
-    --light-yellow: rgb(255, 252, 235);
-    --light-orange: rgb(244, 188, 135);
+    --light-yellow: #fdfcdcff;
+    --light-orange: #fed9b7ff;
     --bittersweet: #f07167ff;
 
 font-family: "Rethink Sans", san-serif;
@@ -17,35 +17,32 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 main {
     min-height: 95dvh;
     width: 70dvw;
+}
+
+section {
+    width: 75dvw;
     display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 main * {
-    margin: 1em;
+    margin: 2em;
 }
 
 header h1 {
     font-size: 60px;
-    padding: 0.75em;
+    padding-top: 0.75em;
+    margin-right: 0.5em;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-header h3 {
-    display: flex;
-    justify-content: right;
-    align-items: flex-end;
-}
 
 .header {
     position: relative;
@@ -56,6 +53,7 @@ header h3 {
     background: var(--bittersweet);
     padding: 0 25px;
     transition: 0.3s;
+    opacity: 85%;
 }
 
 .navlogo > a {
@@ -91,7 +89,7 @@ header h3 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -169,7 +167,8 @@ header h3 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:768px) {
+/* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
+@media screen and (max-width:992px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -192,28 +191,33 @@ header h3 {
     .menu li {
         width: 100%;
     }
-    .menu li a, .menu li a:hover {
-        padding: 30px;
-        font-size: 18px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    .menu li a,
+    .menu li a:hover {
+    padding: 30px;
+    font-size: 18px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
 
-.selfimg {
-    height: 45dvh;
-    width: 45dvh;
+article > img {
+    height: auto;
+    width: 40dvw;
     object-fit: cover;
-    margin-top: 3em;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.CVlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100dvw;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
