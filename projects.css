@@ -191,10 +191,9 @@ header h1 {
     max-width: 65dvw;
 
     transition: 1s;
-    height: 30dvh;
-    width: 30dvh;
+    height: 20dvh;
+    width: 20dvh;
     row-gap: 1em;
-    margin: 2em;
     padding: 1em;
     background-color: var(--verdigris);
     border-radius: 2em;
@@ -220,6 +219,8 @@ header h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 60dvw;
+    min-height: 100dvh;
 }
 
 footer {

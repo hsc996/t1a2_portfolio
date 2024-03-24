@@ -8,62 +8,36 @@
 font-family: "Rethink Sans", san-serif;
 }
 
-
 * {
     margin: 0;
 }
 
 body {
     background-color: var(--light-yellow);
+}
+
+main {
+    min-height: 95dvh;
+    width: 70dvw;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-main {
-    min-height:87dvh;
-    width: 70dvw;
+main > img > .cv {
+    width: 40dvw;
+    height: auto;
+
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
 }
 
 main * {
-    margin: 1em;
-}
-
-.mainheader {
-    background-color: var(--light-yellow);
-    height: 5dvh;
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 4em;
-    display: flex;
-    flex-direction: column;
-}
-
-
-header h2 {
-    font-size: 50px;
-    padding: 1em;
-    margin-top: 1em;
-    margin-left: 0.5em;
-    display: flex;
-    justify-content: column;
-}
-
-.header {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--bittersweet);
-    padding: 0 25px;
-    transition: 0.3s;
-    opacity: 85%;
+    margin: 2em;
 }
 
 .navlogo > a {
@@ -177,7 +151,8 @@ header h2 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:600px) {
+/* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
+@media screen and (max-width:992px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -200,55 +175,18 @@ header h2 {
     .menu li {
         width: 100%;
     }
-    .menu li a, .menu li a:hover {
-        padding: 30px;
-        font-size: 18px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    .menu li a,
+    .menu li a:hover {
+    padding: 30px;
+    font-size: 18px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
-}
-
- .contactinfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin-top: 20dvh;
- }
-
- main > .iconcontentrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-}
-
-main > .iconcontentrow > .iconpreview {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.iconpreview > a > img {
-    max-width: 65dvw;
-
-    transition: 1s;
-    height: 5dvh;
-    width: auto;
-    margin: -1em;
-    border-radius: 2em;
-    box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502)
-}
-
-.iconpreview > a >img:hover {
-    box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
-    padding: 0.1em 0.1em 0.1em;
 }
 
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100%;
+    width: 100dvw;
     text-align: center;
     display: flex;
     justify-content: center;

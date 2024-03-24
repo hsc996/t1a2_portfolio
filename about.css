@@ -14,20 +14,16 @@ font-family: "Rethink Sans", san-serif;
 
 body {
     background-color: var(--light-yellow);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 main {
     min-height: 95dvh;
     width: 70dvw;
-}
 
-section {
-    width: 75dvw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main * {
@@ -37,16 +33,25 @@ main * {
 header h1 {
     font-size: 60px;
     padding-top: 0.75em;
-    margin-right: 0.5em;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
+main > .content {
+    min-width: 80dvw;
+    margin-left: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .header {
     position: relative;
-    width: 100%;
+    width: 100dvw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,14 +61,14 @@ header h1 {
     opacity: 85%;
 }
 
-.navlogo > a {
+/* .navlogo > a {
     display: block;
 }
 
 .navlogo > a > img {
     display: block;
     width: 100%;
-}
+} */
 
 .dropdown {
     display: flex;
@@ -133,7 +138,7 @@ header h1 {
 }
 
 .toggle-menu {
-    position: aboslute;
+    position: absolute;
     width: 30px;
     height: 100%;
     z-index: 3;
@@ -199,25 +204,50 @@ header h1 {
     }
 }
 
-article > img {
-    height: auto;
-    width: 40dvw;
-    object-fit: cover;
+/* Desktop view */
+@media screen and (min-width: 900px) {
+   body > main > article {
     display: flex;
-    justify-content: flex-end;
-    align-items: end;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+   }
+   
+    body > main > article > img {
+        width: 35dvw;
+        height: auto;
+    }
 }
 
-.CVlink {
+main > article > img {
+    height: auto;
+    width: 70dvw;
+    object-fit: cover;
+    margin-left: 8rem;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+body > main > a {
+    color: var(--light-orange);
+    background-color: var(--bittersweet);
+    text-decoration: none;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 1em;
+    border-radius: 2em;
+    margin-left: 8rem;
+    margin-bottom: 5rem;
+    opacity: 85%
+}
+
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100%;
+    width: 100dvw;
     text-align: center;
     display: flex;
     justify-content: center;
