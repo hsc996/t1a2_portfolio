@@ -61,14 +61,16 @@ main > .content {
     opacity: 85%;
 }
 
-/* .navlogo > a {
+.navlogo > a {
     display: block;
 }
 
 .navlogo > a > img {
     display: block;
-    width: 100%;
-} */
+    width: 4vw;
+    height: auto;
+    padding-left: 1em;
+}
 
 .dropdown {
     display: flex;
