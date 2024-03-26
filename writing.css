@@ -21,7 +21,7 @@ body {
 }
 
 main {
-    min-height: 95dvh;
+    min-height: 200dvh;
     width: 70dvw;
     display: flex;
     flex-direction:column;
@@ -38,14 +38,18 @@ main * {
     width: 100dvw;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-right: 2em;
+}
+.mainheader > p {
+    margin-left: 4em;
+    margin-right: 3em;
 }
 
 
 header h1 {
-    font-size: 60px;
+    font-size: 13vw;
     padding: 0.75em;
-    margin-top: 30dvh;
 
     display: flex;
     flex-direction: column;
@@ -53,11 +57,56 @@ header h1 {
     align-items: flex-end;
 }
 
+header h2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
 header h3 {
     display: flex;
-    justify-content: right;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 10dvh;
+    width: 90dvw;
+ }
+
+ .contentbox {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+ }
+ 
+ .contentbox > h3 {
+    background-color: var(--verdigris);
+    width: 30dvw;
+    height: auto;
+    padding: 0.25em;
+    border-radius: 1em;
+    margin: 1em;
+ }
+
+ .contentbox > p {
+    background-color: var(--light-yellow);
+    padding: 1em;
+ }
 
 .header {
     position: relative;
@@ -182,7 +231,7 @@ header h3 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:992px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -211,6 +260,54 @@ header h3 {
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
+
+/* Desktop view */
+@media screen and (min-width: 600px) {
+    .mainheader {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+    }
+ 
+     .mainheader > h1 {
+         font-size: 7vw;
+     }
+
+     .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        height: 10dvh;
+        width: 30dvw;
+     }
+
+     .contentbox {
+        background-color: var(--light-orange);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        margin: 1em;
+     }
+     
+     .contentbox > h3 {
+        background-color: var(--verdigris);
+        width: 8dvw;
+        height: auto;
+        padding: 0.25em;
+        border-radius: 1em;
+        margin: 1em;
+     }
+
+     .contentbox > p {
+        background-color: var(--light-yellow);
+        padding: 1em;
+     }
+ }
 
 
 footer {
