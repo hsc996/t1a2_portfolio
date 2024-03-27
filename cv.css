@@ -17,21 +17,21 @@ body {
 }
 
 main {
-    min-height: 95dvh;
+    min-height: 92dvh;
     width: 70dvw;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-main > img > .cv {
-    width: 40dvw;
-    height: auto;
+main > .cv {
+    width: 100dvw;
+    object-fit: cover;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -40,13 +40,26 @@ main * {
     margin: 2em;
 }
 
+.header {
+    position: relative;
+    width: 100%;
+    height: 5dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bittersweet);
+    padding: 0 25px;
+    transition: 0.3s;
+    opacity: 85%;
+}
+
 .navlogo > a {
     display: block;
 }
 
 .navlogo > a > img {
     display: block;
-    width: 4vw;
+    width: 8vw;
     height: auto;
     padding-left: 1em;
 }
@@ -154,10 +167,11 @@ main * {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:992px) {
+@media screen and (max-width:800px) {
     .hamburger,
     .toggle-menu {
     display: block;
+    margin-right: 0.2em;
     }
     .header {
         padding:10px 20px;
@@ -168,7 +182,7 @@ main * {
         align-items: center;
         position: fixed;
         top: 0;
-        right: -300;
+        margin-left: 3em;
         background: var(--bittersweet);
         width: 170px;
         height: 100%;
@@ -182,6 +196,16 @@ main * {
     padding: 30px;
     font-size: 18px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        height: 8dvh;
+    }
+    
+    .navlogo > a > img {
+        width: 3dvw;
     }
 }
 

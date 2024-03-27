@@ -21,8 +21,9 @@ body {
 }
 
 main {
-    min-height: 200dvh;
+    min-height: 155dvh;
     width: 70dvw;
+
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -111,6 +112,7 @@ header h3 {
 .header {
     position: relative;
     width: 100%;
+    height: 5dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +128,7 @@ header h3 {
 
 .navlogo > a > img {
     display: block;
-    width: 4vw;
+    width: 8vw;
     height: auto;
     padding-left: 1em;
 }
@@ -233,10 +235,12 @@ header h3 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:992px) {
+/* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
+@media screen and (max-width:800px) {
     .hamburger,
     .toggle-menu {
     display: block;
+    margin-right: 0.2em;
     }
     .header {
         padding:10px 20px;
@@ -247,7 +251,7 @@ header h3 {
         align-items: center;
         position: fixed;
         top: 0;
-        right: -300;
+        margin-left: 3em;
         background: var(--bittersweet);
         width: 170px;
         height: 100%;
@@ -309,8 +313,15 @@ header h3 {
         background-color: var(--light-yellow);
         padding: 1em;
      }
- }
 
+     .header {
+        height: 8dvh;
+    }
+    
+    .navlogo > a > img {
+        width: 3dvw;
+    }
+}
 
 footer {
     background-color: var(--bittersweet);

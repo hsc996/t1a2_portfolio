@@ -2,27 +2,32 @@
 
 ## Sitemap
 
-- Home
+Below is a written version of the sitemap I devised for the website prior to commencing.
+The main pages are listed with '+' signs, and will each be connected by a navigation bar in the header of every page.
+The subheadings listed with the '>' icon symbolise links/buttons that will navigate to another page.
+Please see the Sitemap attached for the visual representation of how to navigate the website.
+
++ Home
     > Icon links:
         1. Twitter
         2. Github
         3. LinkedIn
         4. Instgram
-- About
++ About
     > Button link to CV
-- Projects
++ Projects
     > Project 1
     > Project 2
     > Project 3
     > Project 4
     > Project 5
     > Project 6
-- Writing
++ Writing
     > Blog #1
     > Blog #2
     > Blog #3
     > Blog #4
-- Contact
++ Contact
      > Icon links:
         1. Twitter
         2. Github
@@ -39,3 +44,4 @@
 - Screenshots
 - Target audience
 - Tech stack: html, css, deployment platform, etc.
+

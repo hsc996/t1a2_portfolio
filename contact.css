@@ -22,8 +22,8 @@ body {
 }
 
 main {
-    min-height:87dvh;
-    width: 70dvw;
+    min-height: 92dvh;
+    min-width: 50dvw;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -35,28 +35,22 @@ main * {
 }
 
 .mainheader {
-    background-color: var(--light-yellow);
     height: 5dvh;
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 4em;
+    margin-top: 2em;
+    font-size: 15vw;
+    padding: 1em;
+
+
     display: flex;
     flex-direction: column;
-}
-
-
-header h2 {
-    font-size: 13vw;
-    padding: 1em;
-    margin-top: 1em;
-    margin-left: 0.5em;
-    display: flex;
-    justify-content: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
     position: relative;
-    width: 100%;
+    width: 100dvw;
+    height: 5dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +66,7 @@ header h2 {
 
 .navlogo > a > img {
     display: block;
-    width: 4vw;
+    width: 8vw;
     height: auto;
     padding-left: 1em;
 }
@@ -179,10 +173,12 @@ header h2 {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:600px) {
+/* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
+@media screen and (max-width:900px) {
     .hamburger,
     .toggle-menu {
     display: block;
+    margin-right: 0.2em;
     }
     .header {
         padding:10px 20px;
@@ -193,7 +189,7 @@ header h2 {
         align-items: center;
         position: fixed;
         top: 0;
-        right: -300;
+        margin-left: 3em;
         background: var(--bittersweet);
         width: 170px;
         height: 100%;
@@ -202,18 +198,47 @@ header h2 {
     .menu li {
         width: 100%;
     }
-    .menu li a, .menu li a:hover {
-        padding: 30px;
-        font-size: 18px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    .menu li a,
+    .menu li a:hover {
+    padding: 30px;
+    font-size: 18px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
+
+/* Desktop view */
+@media screen and (min-width:600px) {
+    .header {
+        height: 8dvh;
+    }
+
+    .navlogo > a > img {
+        width: 3dvw;
+    }
+
+    .mainheader {
+        font-size: 7dvw;
+        margin-left: 0em;
+        margin-top: 0em;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .contactinfo {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}      
 
  .contactinfo {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin-top: 20dvh;
+    margin-top: 5dvh;
  }
 
  main > .iconcontentrow {
@@ -250,7 +275,7 @@ main > .iconcontentrow > .iconpreview {
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100%;
+    width: 100dvw;
     text-align: center;
     display: flex;
     justify-content: center;
