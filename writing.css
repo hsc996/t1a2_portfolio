@@ -20,18 +20,12 @@ body {
     align-items: center;
 }
 
-main {
-    min-height: 155dvh;
-    width: 70dvw;
-
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-}
-
 main * {
     margin: 1em;
+}
+
+main {
+    min-height: 210dvh;
 }
 
 .mainheader{
@@ -72,42 +66,6 @@ header h3 {
     justify-content:center;
     align-items: center;
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    height: 10dvh;
-    width: 90dvw;
- }
-
- .contentbox {
-    background-color: var(--light-orange);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    margin-bottom: 2em;
-    margin-left: 2em;
- }
- 
- .contentbox > h3 {
-    background-color: var(--verdigris);
-    width: 30dvw;
-    height: auto;
-    padding: 0.25em;
-    border-radius: 1em;
-    margin: 1em;
- }
-
- .contentbox > p {
-    background-color: var(--light-yellow);
-    padding: 1em;
- }
 
 .header {
     position: relative;
@@ -268,7 +226,7 @@ header h3 {
 }
 
 /* Desktop view */
-@media screen and (min-width: 600px) {
+@media screen and (min-width:600px) {
     .mainheader {
          display: flex;
          flex-direction: column;
@@ -299,19 +257,14 @@ header h3 {
         padding: 1em;
         margin: 1em;
      }
-     
-     .contentbox > h3 {
-        background-color: var(--verdigris);
-        width: 8dvw;
-        height: auto;
-        padding: 0.25em;
-        border-radius: 1em;
-        margin: 1em;
+     .wrapper .contentbox h3 {
+        width: 12dvw;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
      }
 
      .contentbox > p {
-        background-color: var(--light-yellow);
-        padding: 1em;
+        width: 40dvw;
      }
 
      .header {
@@ -321,7 +274,60 @@ header h3 {
     .navlogo > a > img {
         width: 3dvw;
     }
+
+    .contentbox button a:hover {
+       cursor: pointer;
+    }
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* height: 10dvh;
+    width: 90dvw; */
+ }
+
+ .contentbox {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+ }
+ 
+.contentbox > h3 {
+    background-color: var(--verdigris);
+    width: 35dvw;
+    height: 100%;
+    padding: 0.25em;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.contentbox > p {
+    background-color: var(--light-yellow);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+button {
+    border-color: darkorange;
+    padding: 0.5em;
+}
+
+ button > a {
+    text-decoration: none;
+    color: darkorange;
+    font-weight: bold;
+    font-style: italic;
+ }
 
 footer {
     background-color: var(--bittersweet);
