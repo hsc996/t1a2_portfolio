@@ -25,20 +25,7 @@ main * {
 }
 
 main {
-    min-height: 210dvh;
-}
-
-.mainheader{
-    height: 7dvh;
-    width: 100dvw;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-right: 2em;
-}
-.mainheader > p {
-    margin-left: 4em;
-    margin-right: 3em;
+    min-height: 300dvh;
 }
 
 
@@ -257,14 +244,20 @@ header h3 {
         padding: 1em;
         margin: 1em;
      }
-     .wrapper .contentbox h3 {
-        width: 30dvw;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+
+     .wrapper > .contentbox > h3 {
+        width: 40dvw;
      }
 
+     .contentbox > .dateposted {
+        font-style: italic;
+        font-weight: bold;
+        position: relative;
+        left: 10em;
+    }
+
      .contentbox > p {
-        width: 40dvw;
+        width: 45dvw;
      }
 
      .header {
@@ -277,8 +270,11 @@ header h3 {
 
     .contentbox button a:hover {
        cursor: pointer;
+       color: black;
+       text-transform: uppercase;
     }
 }
+
 
 .wrapper {
     display: flex;
@@ -286,9 +282,6 @@ header h3 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    /* height: 10dvh;
-    width: 90dvw; */
  }
 
  .contentbox {
@@ -297,14 +290,14 @@ header h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
     margin-bottom: 2em;
     margin-left: 2em;
+    padding: 1em;
  }
  
 .contentbox > h3 {
     background-color: var(--verdigris);
-    width: 35dvw;
+    width: 60dvw;
     height: 100%;
     padding: 0.25em;
     border-radius: 1em;
@@ -315,6 +308,10 @@ header h3 {
     background-color: var(--light-yellow);
     padding: 1em;
     margin-bottom: 1em;
+}
+
+.contentbox > .dateposted {
+    font-style: italic;
 }
 
 button {
