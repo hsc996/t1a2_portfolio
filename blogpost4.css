@@ -8,44 +8,93 @@
 font-family: "Rethink Sans", san-serif;
 }
 
-
 * {
     margin: 0;
 }
 
 body {
     background-color: var(--light-yellow);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    min-height: 92dvh;
-    min-width: 50dvw;
 }
 
 main * {
     margin: 1em;
 }
 
-.mainheader {
-    height: 5dvh;
-    margin-top: 2em;
-    font-size: 15vw;
-    padding: 1em;
+main {
+    min-height: 92dvh;
+    width: 70dvw;
+}
 
-
+main > section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Semantic element "aside" used to position main images side by side in mobile view */
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 2.5em;
+    margin-bottom: 3em;
+}
+
+.photo1 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
+    padding-left: 5em;
+}
+
+.photo2 {
+    width: 30dvw;
+    height: auto;
+    object-fit: cover;
+}
+
+section {
+    width: 65dvw;
+    padding-left: 2em;
+}
+
+header h2 {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right:3em;
+}
+
+header h3 {
+    padding-left: 3.5em;
+    padding-top: 1em;
+
+    font-size: 3dvw;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    font-style: italic;
+}
+
 .header {
     position: relative;
-    width: 100dvw;
+    width: 100%;
     height: 5dvh;
     display: flex;
     justify-content: space-between;
@@ -170,7 +219,7 @@ main * {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:900px) {
+@media screen and (max-width:800px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -202,72 +251,73 @@ main * {
     }
 }
 
-/* Desktop view */
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
     .header {
         height: 8dvh;
+        width: 100%;
     }
-
+    
     .navlogo > a > img {
         width: 3dvw;
     }
 
-    header > .mainheader {
-        font-size: 7dvw;
-        margin-left: 0em;
-        margin-top: 0;
+    header > h2 {
+        font-size: 7dvh;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-bottom: 2em;
     }
 
-    .iconcontentrow {
+    header > h3 {
+        font-size: 3dvh;
+        padding-right: 8em;
+
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    main > .content > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 15em;
+    }
+
+    main > .content > p {
+        align-items: flex-end;
+    }
+
+    main > aside > {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
     }
-}      
 
- .contactinfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin-top: 5dvh;
- }
+    aside {
+        margin-top: 3em;
+    }
 
- main > .iconcontentrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-}
+    .photo1, .photo2, .photo3 {
+        width: 30dvw;
+        height: 50dvh;
+        object-fit: cover;
+        padding-left: 1em;
+    }
 
-main > .iconcontentrow > .iconpreview {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.iconpreview > a > img {
-    max-width: 65dvw;
-
-    transition: 1s;
-    height: 5dvh;
-    width: auto;
-    margin: -1em;
-    border-radius: 2em;
-    box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502)
-}
-
-.iconpreview > a >img:hover {
-    box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
-    padding: 0.1em 0.1em 0.1em;
+    .photo1 {
+        margin-left: 30em;
+    }
 }
 
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100dvw;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
