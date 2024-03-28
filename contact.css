@@ -30,7 +30,7 @@ main * {
     margin: 1em;
 }
 
-.mainheader {
+header > .maintitle {
     height: 5dvh;
     margin-top: 2em;
     font-size: 15vw;
@@ -212,7 +212,7 @@ main * {
         width: 3dvw;
     }
 
-    header > .mainheader {
+    header > .maintitle {
         font-size: 7dvw;
         margin-left: 0em;
         margin-top: 0;

@@ -25,7 +25,7 @@ main * {
 }
 
 main {
-    min-height: 700dvh;
+    min-height: 500dvh;
 }
 
 
@@ -214,13 +214,11 @@ header h3 {
 
 /* Desktop view */
 @media screen and (min-width:600px) {
-    .mainheader {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
+    main {
+        min-height: 640dvh;
     }
  
-     .mainheader > h1 {
+     header > h1 {
          font-size: 7vw;
      }
 
@@ -242,7 +240,7 @@ header h3 {
         justify-content: center;
         align-items: center;
         padding: 1em;
-        margin: 1em;
+        margin: 4em;
      }
 
      .wrapper > .contentbox > h3 {

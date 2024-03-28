@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- Link to external stylesheet -->
     <link rel="stylesheet" href="blogpost3.css">
-
+<!-- This link allows me to utilise a font I've chosen from Google Fonts. The corresponding CSS can be found within the "root" selector -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Murecho:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <!-- Here I've ustilised the semantic "header" + "nav" elements to clarify this section as the overarching header + navigation bar spanning across all pages. I've overriden each of them using the "class" selector in order to make them more specific, allowing me to style each section individually -->
     <header class ="header">
+        <!-- Here I've inserted a custom logo into the left corner of the page to make the page look more legitimate and professional. This will also be visible on all pages -->
         <div class ="navlogo">
             <a href="#">
                 <img src="./images/logo.png" alt="logo">
             </a>
         </div>
+        <!-- Here I've used the semantic "nav" selector to make the code more readable and accessible. Within this component of code, I've also created a custom checkbox, requiring user input in order to manipulate the dropdown navigation bar that will appear when the screen shrinks to mobile view. The dropdown menu has been composed by using an "unordered list"-->
          <nav class ="dropdown">
             <input type ="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
@@ -30,17 +34,21 @@
                 </ul>
         </nav>
     </header>
+    <!-- Here I've used another semantic "header" element so that the main title of the webpage doesn't appear in the top header. The semantic tag <h1> is used to style the main title and <h2> / <h3> for the subheadings -->
     <header>
         <h2>Embracing the Polyglot Developer: Exploring the Beauty of Programming Languages</h2>
         <h3>Posted: 28th March 2024</h3>
     </header>
     <main>
+        <!-- Here I've used the semantic <aside> tags in order to position the images side by side with the corresponding CSS code -->
         <aside>
             <img class="photo1" src="./images/html.jpg" alt="Main Image">
             <img class="photo2" src="./images/js.jpg" alt="Main Image">
             <img class="photo3" src="./images/C++.jpg" alt="Main Image">
         </aside>
+        <!-- This <div> tag is used as the wrapper for the content. I'll be able to position the content boxes by applying flexbox to the corresponding CSS -->
         <div class="content">
+        <!-- Each <section> tag is used to signify individual paragraphs for easy readability of code -->
         <section>
             As software developers, we often find ourselves navigating through a myriad of programming languages, each with its unique syntax, paradigms, and quirks. It's akin to being multilingual in the realm of technology, where fluency in various languages opens doors to different perspectives, problem-solving approaches, and opportunities. In this blog post, let's delve into the world of programming languages and celebrate the richness they bring to our craft.
         </section>
@@ -56,9 +64,11 @@
         <section>
             In conclusion, being a polyglot developer is not just about mastering multiple programming languages—it's about embracing diversity, creativity, and continuous learning. By immersing ourselves in different languages, paradigms, and ecosystems, we enrich our problem-solving abilities, broaden our perspectives, and become more effective engineers. So, whether you're passionate about the simplicity of Ruby, the concurrency of Go, or the elegance of Lisp, remember that each language has its own unique strengths and beauty waiting to be explored. Embrace the diversity, and let the world of programming languages be your playground of endless possibilities. Happy coding!
         </section>
+        <!-- For the sign off I've used a different tag so I can style it differently to the main content -->
     </br><p>Words by Hannah Scaife</p></br>
     </div>
     </main>
+<!-- Semantic element "footer" used for clarity/accessibility. I've included a copyright symbol to make the footer look more professional and legitimate -->
     <footer>
         <h6>Hannah Scaife &copy; 2024</h6>
     </footer>

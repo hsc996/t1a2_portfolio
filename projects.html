@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- Link to external stylesheet -->
     <link rel="stylesheet" href="projects.css">
-
+<!-- This link allows me to utilise a font I've chosen from Google Fonts. The corresponding CSS can be found within the "root" selector -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Murecho:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <!-- Here I've ustilised the semantic "header" + "nav" elements to clarify this section as the overarching header + navigation bar spanning across all pages. I've overriden each of them using the "class" selector in order to make them more specific, allowing me to style each section individually -->
     <header class ="header">
+        <!-- Here I've inserted a custom logo into the left corner of the page to make the page look more legitimate and professional. This will also be visible on all pages -->
         <div class ="navlogo">
             <a href="#">
                 <img src="./images/logo.png" alt="logo">
             </a>
         </div>
+        <!-- Here I've used the semantic "nav" selector to make the code more readable and accessible. Within this component of code, I've also created a custom checkbox, requiring user input in order to manipulate the dropdown navigation bar that will appear when the screen shrinks to mobile view. The dropdown menu has been composed by using an "unordered list"-->
          <nav class ="dropdown">
             <input type ="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
@@ -30,14 +34,19 @@
                 </ul>
         </nav>
     </header>
-    <header class="mainheader">
+    <!-- Here I've used another semantic "header" element so that the main title of the webpage doesn't appear in the top header. The semantic tag <h1> is used to style the main title -->
+    <header>
         <h1>Projects.</h1>
     </header>
+    <!-- Semantic element "main" is used to identify the main body of content-->
     <main>
+        <!-- This section is used as the wrapper for the content. I'll be able to position the content boxes by applying flexbox to the corresponding CSS -->
         <section class="contentRow">
-        <section class="projectPreview">
+            <!-- Each of the content components (or "sections") are attributed the same class name so that they can all be styled identically -->
+            <section class="projectPreview">
             <a href="#"><img src="./images/coming_soon.jpeg" alt="Project photo 1"/></a>
-        </section>
+            </section>
+
              <section class="projectPreview">
             <a href="#"><img src="./images/coming_soon.jpeg" alt="Project photo 2"/></a>
             </section>
@@ -59,6 +68,7 @@
             </section>
         </section>
     </main>
+    <!-- Semantic element "footer" used for clarity/accessibility. I've included a copyright symbol to make the footer look more professional and legitimate -->
     <footer>
         <h6>Hannah Scaife &copy; 2024</h6>
     </footer>

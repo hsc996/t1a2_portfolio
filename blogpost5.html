@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- Link to external stylesheet -->
     <link rel="stylesheet" href="blogpost5.css">
-
+<!-- This link allows me to utilise a font I've chosen from Google Fonts. The corresponding CSS can be found within the "root" selector -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Murecho:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <!-- Here I've ustilised the semantic "header" + "nav" elements to clarify this section as the overarching header + navigation bar spanning across all pages. I've overriden each of them using the "class" selector in order to make them more specific, allowing me to style each section individually -->
     <header class ="header">
+        <!-- Here I've inserted a custom logo into the left corner of the page to make the page look more legitimate and professional. This will also be visible on all pages -->
         <div class ="navlogo">
             <a href="#">
                 <img src="./images/logo.png" alt="logo">
             </a>
         </div>
+        <!-- Here I've used the semantic "nav" selector to make the code more readable and accessible. Within this component of code, I've also created a custom checkbox, requiring user input in order to manipulate the dropdown navigation bar that will appear when the screen shrinks to mobile view. The dropdown menu has been composed by using an "unordered list"-->
          <nav class ="dropdown">
             <input type ="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
@@ -30,15 +34,19 @@
                 </ul>
         </nav>
     </header>
+    <!-- Here I've used another semantic "header" element so that the main title of the webpage doesn't appear in the top header. The semantic tag <h1> is used to style the main title and <h2> / <h3> for the subheadings -->
     <header>
         <h2>The Office Microwave: A Journey Through Culinary Adventure and Misadventure</h2>
         <h3>Posted: 28th March 2024</h3>
     </header>
     <main>
+        <!-- Here I've used the semantic <aside> tags in order to position the images side by side with the corresponding CSS code -->
         <aside>
             <img class="photo1" src="./images/microwave.jpg" alt="Main Image">
         </aside>
+        <!-- This <div> tag is used as the wrapper for the content. I'll be able to position the content boxes by applying flexbox to the corresponding CSS -->
         <div class="content">
+        <!-- Each <section> tag is used to signify individual paragraphs for easy readability of code -->
         <section>
             In the bustling corridors of corporate life, amidst the clacking of keyboards and the hum of fluorescent lights, there exists a culinary oasis—a humble appliance that stands as a beacon of hope for hungry office workers everywhere. Yes, I'm talking about none other than the illustrious office microwave. Join me on a tongue-in-cheek exploration of this unsung hero and its role in the epic saga of workplace cuisine.
         </section>
@@ -62,9 +70,11 @@
             <h3>Conclusion: Ode to the Office Microwave</h3>
             In conclusion, dear reader, let us raise a toast—or perhaps a microwave-safe mug of instant coffee—to the unsung hero of the modern workplace: the office microwave. Whether you view it as a culinary marvel or a necessary evil, one thing is certain—it has earned its rightful place in the pantheon of office amenities. So the next time you find yourself staring into its glowing interior, pondering the mysteries of microwave cuisine, remember to tread lightly, cook wisely, and above all, embrace the absurdity of office life with a smile on your face and a microwave-safe lid on your lunch.
         </section>
+        <!-- For the sign off I've used a different tag so I can style it differently to the main content -->
     </br><p>Words by Hannah Scaife</p></br>
     </div>
     </main>
+<!-- Semantic element "footer" used for clarity/accessibility. I've included a copyright symbol to make the footer look more professional and legitimate -->
     <footer>
         <h6>Hannah Scaife &copy; 2024</h6>
     </footer>

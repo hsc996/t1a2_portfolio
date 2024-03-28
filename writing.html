@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<!-- Link to external stylesheet -->
     <link rel="stylesheet" href="writing.css">
-
+<!-- This link allows me to utilise a font I've chosen from Google Fonts. The corresponding CSS can be found within the "root" selector -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Murecho:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <!-- Here I've ustilised the semantic "header" + "nav" elements to clarify this section as the overarching header + navigation bar spanning across all pages. I've overriden each of them using the "class" selector in order to make them more specific, allowing me to style each section individually -->
     <header class ="header">
+        <!-- Here I've inserted a custom logo into the left corner of the page to make the page look more legitimate and professional. This will also be visible on all pages -->
         <div class ="navlogo">
             <a href="#">
                 <img src="./images/logo.png" alt="logo">
             </a>
         </div>
+        <!-- Here I've used the semantic "nav" selector to make the code more readable and accessible. Within this component of code, I've also created a custom checkbox, requiring user input in order to manipulate the dropdown navigation bar that will appear when the screen shrinks to mobile view. The dropdown menu has been composed by using an "unordered list"-->
         <nav class ="dropdown">
             <input type ="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
@@ -30,66 +34,72 @@
                 </ul>
         </nav>
     </header>
- <header class="mainheader">
+    <!-- Here I've used another semantic "header" element so that the main title of the webpage doesn't appear in the top header. The semantic tag <h1> is used to style the main title and <h2> for the subheading -->
+ <header>
     <h1>Writing</h1>
-
+    <!-- I've used the <section> tag so that I could position this on the left, but position the main title on the right -->
     <section>
         <h2>Delve into my psyche: tech, life and other musings</h2>
     </section>
 </header>
+<!-- Semantic element "main" is used to identify the main body of content-->
 <main>
+    <!-- This section is used as the wrapper for the content. I'll be able to position the content boxes by applying flexbox to the corresponding CSS -->
     <section class="wrapper">
+        <!-- Each of the content components (or "sections") are attributed the same class name so that they can all be styled identically -->
         <section class="contentbox">
+            <!-- In each section -- h3, img, div,  p + button tags are used so that any one reading the code is able to easily delineate the heading, image, date published and paragraph preview -->
             <h3>Embracing the Code: A Nurse's Journey into Software Development</h3>
             <img class= "codeimg" src="./images/codegirl.jpg" alt="code girl">
             <div class="dateposted">Posted: 28th March 2024</div>
-        <p>
+            <p>
             As I sit down to write this, I can't help but reflect on the winding path that has led me here – from the hectic corridors of the ICU to the serene landscape of coding. Transitioning careers from nursing to software development might seem like a leap across a vast chasm, but in reality, the two worlds share surprising similarities and a wealth of transferrable skills...
-        </p>
-        <button><a href="http://127.0.0.1:3002/blogpost1.html">Read more</a></button>
+            </p>
+            <button><a href="http://127.0.0.1:3002/blogpost1.html">Read more</a></button>
         </section>
 
         <section class="contentbox">
-        <h3>Navigating the Digital Maze: Reflections on Technology in the Modern World</h3>
-        <img class= "codeimg" src="./images/techimg.jpg" alt="code girl">
-        <div class="dateposted">Posted: 21th March 2024</div>
-        <p>
+            <h3>Navigating the Digital Maze: Reflections on Technology in the Modern World</h3>
+            <img class= "codeimg" src="./images/techimg.jpg" alt="code girl">
+            <div class="dateposted">Posted: 21th March 2024</div>
+            <p>
             In today's fast-paced world, technology surrounds us at every turn. From smartphones that keep us connected to the internet of things that automate our homes, technology has become an integral part of our daily lives. But as we immerse ourselves deeper into the digital realm, it's crucial to pause and reflect on the impact that technology is having on our society, our relationships, and our sense of self...
-        </p>
-        <button><a href="http://127.0.0.1:3002/blogpost2.html">Read more</a></button>
+            </p>
+            <button><a href="http://127.0.0.1:3002/blogpost2.html">Read more</a></button>
         </section>
 
         <section class="contentbox">
-        <h3>Embracing the Polyglot Developer: Exploring the Beauty of Programming Languages</h3>
-        <img class= "codeimg" src="./images/C++.jpg" alt="code girl">
-        <div class="dateposted">Posted: 18th March 2024</div>
-        <p>
+            <h3>Embracing the Polyglot Developer: Exploring the Beauty of Programming Languages</h3>
+            <img class= "codeimg" src="./images/C++.jpg" alt="code girl">
+            <div class="dateposted">Posted: 18th March 2024</div>
+            <p>
             As software developers, we often find ourselves navigating through a myriad of programming languages, each with its unique syntax, paradigms, and quirks. It's akin to being multilingual in the realm of technology, where fluency in various languages opens doors to different perspectives, problem-solving approaches, and opportunities. In this blog post, let's delve into the world of programming languages and celebrate the richness they bring to our craft...
-        </p>
-        <button><a href="http://127.0.0.1:3002/blogpost3.html">Read more</a></button>
+            </p>
+            <button><a href="http://127.0.0.1:3002/blogpost3.html">Read more</a></button>
         </section>
 
         <section class="contentbox">
-        <h3>Empowering Women in STEM: Breaking Barriers, Shaping the Future</h3>
-        <img class= "codeimg" src="./images/nasa.webp" alt="code girl">
-        <div class="dateposted">Posted: 16th March 2024</div>
-        <p>
+            <h3>Empowering Women in STEM: Breaking Barriers, Shaping the Future</h3>
+            <img class= "codeimg" src="./images/nasa.webp" alt="code girl">
+            <div class="dateposted">Posted: 16th March 2024</div>
+            <p>
             In the world of Science, Technology, Engineering, and Mathematics (STEM), women have long been underrepresented. However, the narrative is changing, and women are increasingly making their mark in these fields, driving innovation, and reshaping the future of technology. In this blog post, let's celebrate the invaluable contributions of women in STEM and explore the importance of empowering and supporting them in their endeavors...
-        </p>
-        <button><a href="http://127.0.0.1:3002/blogpost4.html">Read more</a></button>
+            </p>
+            <button><a href="http://127.0.0.1:3002/blogpost4.html">Read more</a></button>
         </section>
 
         <section class="contentbox">
-        <h3>The Office Microwave: A Journey Through Culinary Adventure and Misadventure</h3>
-        <img class= "codeimg" src="./images/microwave.jpg" alt="microwave">
-        <div class="dateposted">Posted: 9th March 2024</div>
-        <p>
+            <h3>The Office Microwave: A Journey Through Culinary Adventure and Misadventure</h3>
+            <img class= "codeimg" src="./images/microwave.jpg" alt="microwave">
+            <div class="dateposted">Posted: 9th March 2024</div>
+            <p>
             In the bustling corridors of corporate life, amidst the clacking of keyboards and the hum of fluorescent lights, there exists a culinary oasis—a humble appliance that stands as a beacon of hope for hungry office workers everywhere. Yes, I'm talking about none other than the illustrious office microwave. Join me on a tongue-in-cheek exploration of this unsung hero and its role in the epic saga of workplace cuisine...
-        </p>
-        <button><a href="http://127.0.0.1:3002/blogpost5.html">Read more</a></button>
+            </p>
+            <button><a href="http://127.0.0.1:3002/blogpost5.html">Read more</a></button>
         </section>
     </section>
 </main>
+<!-- Semantic element "footer" used for clarity/accessibility. I've included a copyright symbol to make the footer look more professional and legitimate -->
 <footer>
     <h6>Hannah Scaife &copy; 2024</h6>
  </footer>

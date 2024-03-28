@@ -32,14 +32,14 @@ main * {
     margin: 1em;
 }
 
-.mainheader {
+.maintitle {
     height: 5dvh;
     margin-bottom: 1em;
     display: flex;
     flex-direction: column;
 }
 
-header .mainheader {
+header .maintitle {
     font-size: 13vw;
     padding: 1em;
     text-shadow: 7px 7px 11px var(--verdigris);
@@ -217,7 +217,7 @@ header h2 {
         margin: 0;
     }
 
-    header .mainheader {
+    header .maintitle {
         font-size: 7vw;
     }
     
