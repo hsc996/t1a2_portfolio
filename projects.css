@@ -94,7 +94,7 @@ header h1 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -226,17 +226,7 @@ header h1 {
     }
 }
 
-/* Container for flexbox positioning of each row component in relation to the page/each other */
-.contentRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 60dvw;
-    min-height: 100dvh;
-}
-
+/* Container for flexbox positioning of each .contentbox in relation to the page/each other */
 .projectPreview {
     display: flex;
     flex-direction: column;
@@ -258,11 +248,21 @@ header h1 {
     border-radius: 2em;
     box-shadow: 0.5em 0.5em rgba(47, 86, 86, 0.502)
 }
-
-/* Animation of image link when hovered over with cursor */
+ /* Animation of iage link when hovered over */
 .projectPreview > a >img:hover {
     border-radius: 0;
     padding: 15px 30px 15px 30px;
+}
+
+/* Flexbox positioning of content row */
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 60dvw;
+    min-height: 100dvh;
 }
 
  /* Footer styling -- will appear across all pages */

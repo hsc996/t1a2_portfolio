@@ -99,7 +99,7 @@ section > h2 {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -250,38 +250,62 @@ section > h2 {
         font-style: italic;
         font-weight: bold;
         position: relative;
-        left: 10em;
+        font-size: 1.5vw;
+        margin-left : 9em;
     }
+
 
      .contentbox > p {
         width: 45dvw;
+        font-size: 1.1em;
      }
 
+     /* Resizing of main title */
      .header {
         height: 8dvh;
     }
     
+    /* Resizing of  logo */
     .navlogo > a > img {
         width: 3dvw;
     }
 
+    /* Animation of button when hovered over with cursor in desktop view */
     .contentbox button a:hover {
        cursor: pointer;
        color: black;
        text-transform: uppercase;
     }
 
+    /* Styling + resizing of image */
     .contentbox > .codeimg {
         width: 30dvw;
         height: auto;
         border-radius: 0.5em;
+        margin-top: 2em;
     }
 
+    /* Center main title */
     header > .maintitle {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    /* Resize main subheading */
+    header > section > h2 {
+        font-size: 2vw;
+    }
+
+     /* Centre text in blog post tile */
+    .contentbox > h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.5vw;
     }
 }
 

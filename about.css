@@ -106,7 +106,7 @@ main > .wrapper > .content {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -252,16 +252,10 @@ main > .wrapper > .content {
         align-items: center;
     }
 
-    body > main > .wrapper > .cvlink > a {
-        width: 13dvw;
-    }
-
     /* Hover animation for desktop view only */
     body > main > .wrapper > .cvlink > a:hover {
         box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
-        padding: 0.5em 0.5em 0.2em;
     }
-
 }
 
 /* Positioning + styling of main image */
@@ -287,7 +281,7 @@ main > .wrapper > .cvlink > a {
     text-decoration: none;
     font-weight: bolder;
     font-style: italic;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 2em;
     opacity: 85%;
 }

@@ -22,7 +22,6 @@ body {
 /* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
     min-height: 100dvh;
-    width: 40dvw;
 
     display: flex;
     flex-direction: row;
@@ -31,13 +30,22 @@ main {
 }
 
 .content {
-    width: 90dvw;
-    object-fit: cover;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.content > .cv > {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > .cv > img {
+    width: 100dvw;
+    height: auto;
 }
 
 /* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
@@ -95,7 +103,7 @@ main * {
     text-decoration: none;
     display: block;
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1;
     transition: 0.3s;
 }
@@ -217,19 +225,18 @@ main * {
         width: 3dvw;
     }
 
-    .content > .cv {
-        object-fit: cover;
-        width: 50dvw;
-        height: auto;
-    }
-
-    .content {
+    body > main > .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
-        margin-left: 60em;
+    body > main > .content > .cv > {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     footer {
