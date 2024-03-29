@@ -1,3 +1,4 @@
+/* The colour palette + font used throughout the website has been added to the "root" selector for easy accessibility, allowing me to create a consistent theme throughout the website */
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
@@ -8,18 +9,22 @@
 font-family: "Rethink Sans", san-serif;
 }
 
+/* I've removed the margin throughout the document so I can customise as I go */
 * {
     margin: 0;
 }
 
+/* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
 }
 
+/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
 main * {
     margin: 1em;
 }
 
+/* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
     min-height: 92dvh;
     width: 70dvw;
@@ -92,6 +97,7 @@ header h3 {
     font-style: italic;
 }
 
+ /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
     width: 100%;
@@ -105,6 +111,7 @@ header h3 {
     opacity: 85%;
 }
 
+/* Custom logo in header */
 .navlogo > a {
     display: block;
 }
@@ -116,6 +123,7 @@ header h3 {
     padding-left: 1em;
 }
 
+/* Display/position of dropdown navigation bar in mobile view */
 .dropdown {
     display: flex;
     justify-content: space-between;
@@ -152,6 +160,7 @@ header h3 {
 
 }
 
+/* Hamburger toggle positioning and styling for mobile view */
 .hamburger {
     position: relative;
     width: 30px;
@@ -251,6 +260,7 @@ header h3 {
     }
 }
 
+/* Desktop view */
 @media screen and (min-width: 600px) {
     .header {
         height: 8dvh;
@@ -322,6 +332,7 @@ header h3 {
     }
 }
 
+ /* Footer styling -- will appear across all pages */
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;

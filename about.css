@@ -1,3 +1,4 @@
+/* The colour palette + font used throughout the website has been added to the "root" selector for easy accessibility, allowing me to create a consistent theme throughout the website */
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
@@ -8,16 +9,23 @@
 font-family: "Rethink Sans", san-serif;
 }
 
+/* I've removed the margin throughout the document so I can customise as I go */
 * {
     margin: 0;
 }
 
+/* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
+main * {
+    margin: 1em;
 }
 
 main {
@@ -28,10 +36,7 @@ main {
     align-items: center;
 }
 
-main * {
-    margin: 1em;
-}
-
+/* Styling + positioning of main title */
 header h1 {
     font-size: 13vw;
     padding-top: 0.75em;
@@ -50,6 +55,7 @@ main > .wrapper > .content {
     align-items: center;
 }
 
+ /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
     width: 100%;
@@ -63,6 +69,7 @@ main > .wrapper > .content {
     opacity: 85%;
 }
 
+/* Custom logo in header */
 .navlogo > a {
     display: block;
 }
@@ -74,6 +81,7 @@ main > .wrapper > .content {
     padding-left: 1em;
 }
 
+/* Display/position of dropdown navigation bar in mobile view */
 .dropdown {
     display: flex;
     justify-content: space-between;
@@ -110,6 +118,7 @@ main > .wrapper > .content {
 
 }
 
+/* Hamburger toggle positioning and styling for mobile view */
 .hamburger {
     position: relative;
     width: 30px;
@@ -243,12 +252,19 @@ main > .wrapper > .content {
         align-items: center;
     }
 
-    body > main > .wrapper > .cvlink {
-        width: 18dvw;
+    body > main > .wrapper > .cvlink > a {
+        width: 13dvw;
+    }
+
+    /* Hover animation for desktop view only */
+    body > main > .wrapper > .cvlink > a:hover {
+        box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
+        padding: 0.5em 0.5em 0.2em;
     }
 
 }
 
+/* Positioning + styling of main image */
 main > .wrapper > article > img {
     height: auto;
     width: 70dvw;
@@ -256,21 +272,27 @@ main > .wrapper > article > img {
     margin-bottom: 1em;
 }
 
-main > .wrapper > .cvlink {
+/* Container for flexbox positioning of CV link */
+.cvlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling of CV link to appear as button for visibility */
+main > .wrapper > .cvlink > a {
     background-color: var(--bittersweet);
-    width: 38.5dvw;
+    color: var(--light-orange);
+    text-decoration: none;
+    font-weight: bolder;
+    font-style: italic;
     padding: 0.5em;
     border-radius: 2em;
     opacity: 85%;
 }
 
-.cvlink > a {
-    color: var(--light-orange);
-    text-decoration: none;
-    font-weight: bolder;
-    font-style: italic;
-}
-
+/* Flexbox positioning of paragraph content */
 .wrapper > .content {
     display: flex;
     flex-direction: column;
@@ -278,6 +300,7 @@ main > .wrapper > .cvlink {
     align-items: center;
 }
 
+ /* Footer styling -- will appear across all pages */
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;

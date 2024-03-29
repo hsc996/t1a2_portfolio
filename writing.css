@@ -1,3 +1,4 @@
+/* The colour palette + font used throughout the website has been added to the "root" selector for easy accessibility, allowing me to create a consistent theme throughout the website */
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
@@ -8,10 +9,12 @@
 font-family: "Rethink Sans", san-serif;
 }
 
+/* I've removed the margin throughout the document so I can customise as I go */
 * {
     margin: 0;
 }
 
+/* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
     display: flex;
@@ -20,16 +23,17 @@ body {
     align-items: center;
 }
 
+/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
 main * {
     margin: 1em;
 }
 
 main {
-    min-height: 500dvh;
+    min-height: 350dvh;
 }
 
-
-header h1 {
+/* Here I've overriden the header with a div tag and class selector in order to isolate the main title + style it independent of the main header -- I've used flexbox to position the title to the right of the page */
+header .maintitle {
     font-size: 13vw;
     padding: 0.75em;
 
@@ -38,22 +42,13 @@ header h1 {
     justify-content: center;
     align-items: flex-end;
 }
-
-header h2 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+/* Styling subheading */
+section > h2 {
     margin-left: 3em;
     margin-right: 3em;
 }
 
-header h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
-
+ /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
     width: 100%;
@@ -67,6 +62,7 @@ header h3 {
     opacity: 85%;
 }
 
+/* Custom logo in header */
 .navlogo > a {
     display: block;
 }
@@ -78,6 +74,7 @@ header h3 {
     padding-left: 1em;
 }
 
+/* Display/position of dropdown navigation bar in mobile view */
 .dropdown {
     display: flex;
     justify-content: space-between;
@@ -114,6 +111,7 @@ header h3 {
 
 }
 
+/* Hamburger toggle positioning and styling for mobile view */
 .hamburger {
     position: relative;
     width: 30px;
@@ -213,12 +211,12 @@ header h3 {
 }
 
 /* Desktop view */
-@media screen and (min-width:600px) {
+@media screen and (min-width:800px) {
     main {
-        min-height: 640dvh;
+        min-height: 750dvh;
     }
  
-     header > h1 {
+     header > .maintitle {
          font-size: 7vw;
      }
 
@@ -278,8 +276,16 @@ header h3 {
         height: auto;
         border-radius: 0.5em;
     }
+
+    header > .maintitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
+/* Container for flexbox positioning of each .contentbox in relation to the page/each other */
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -288,6 +294,7 @@ header h3 {
     flex-wrap: wrap;
  }
 
+ /* Container for flexbox styling/positioning of contents of .contentbox */
  .contentbox {
     background-color: var(--light-orange);
     display: flex;
@@ -299,29 +306,35 @@ header h3 {
     padding: 1em;
  }
  
+ /* Styling + positioning of header within .contentbox */
 .contentbox > h3 {
     background-color: var(--verdigris);
     width: 60dvw;
     height: 100%;
-    padding: 0.25em;
+    padding: 0.5em;
     border-radius: 1em;
     margin: 1em;
 }
 
+ /* Styling + positioning of paragraph within .contentbox */
 .contentbox > p {
     background-color: var(--light-yellow);
     padding: 1em;
     margin-bottom: 1em;
 }
 
+/* Styling of publish date */
 .contentbox > .dateposted {
     font-style: italic;
 }
+
+/* All preview blog images are attributed the same class selector to apply a common theme */
 .codeimg {
     width: 60dvw;
     height: auto;
 }
 
+/* Button to link directing to full blog post */
 button {
     border-color: darkorange;
     padding: 0.5em;
@@ -334,6 +347,7 @@ button {
     font-style: italic;
  }
 
+ /* Footer styling -- will appear across all pages */
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;

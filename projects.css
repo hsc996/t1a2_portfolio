@@ -1,3 +1,4 @@
+/* The colour palette + font used throughout the website has been added to the "root" selector for easy accessibility, allowing me to create a consistent theme throughout the website */
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
@@ -8,10 +9,12 @@
 font-family: "Rethink Sans", san-serif;
 }
 
+/* I've removed the margin throughout the document so I can customise as I go */
 * {
     margin: 0;
 }
 
+/* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
     display: flex;
@@ -20,6 +23,7 @@ body {
     align-items: center;
 }
 
+/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
 main * {
     margin: 1em;
 }
@@ -28,6 +32,7 @@ main {
     min-height: 94dvh;
 }
 
+/* Styling + positioning of main title */
 header h1 {
     font-size: 13vw;
     padding-top: 0.75em;
@@ -37,6 +42,7 @@ header h1 {
     flex-wrap: wrap;
 }
 
+ /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
     width: 100%;
@@ -50,6 +56,7 @@ header h1 {
     opacity: 85%
 }
 
+/* Custom logo in header */
 .navlogo > a {
     display: block;
 }
@@ -61,6 +68,7 @@ header h1 {
     padding-left: 1em;
 }
 
+/* Display/position of dropdown navigation bar in mobile view */
 .dropdown {
     display: flex;
     justify-content: space-between;
@@ -98,6 +106,7 @@ header h1 {
 
 }
 
+/* Hamburger toggle positioning and styling for mobile view */
 .hamburger {
     position: relative;
     width: 30px;
@@ -217,6 +226,26 @@ header h1 {
     }
 }
 
+/* Container for flexbox positioning of each row component in relation to the page/each other */
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 60dvw;
+    min-height: 100dvh;
+}
+
+.projectPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+/* Styling of image link */
 .projectPreview > a > img {
     max-width: 65dvw;
 
@@ -229,30 +258,14 @@ header h1 {
     border-radius: 2em;
     box-shadow: 0.5em 0.5em rgba(47, 86, 86, 0.502)
 }
-    
-.projectPreview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; 
-}
 
+/* Animation of image link when hovered over with cursor */
 .projectPreview > a >img:hover {
     border-radius: 0;
     padding: 15px 30px 15px 30px;
 }
 
-.contentRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 60dvw;
-    min-height: 100dvh;
-}
-
+ /* Footer styling -- will appear across all pages */
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
