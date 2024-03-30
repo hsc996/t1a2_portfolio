@@ -202,6 +202,70 @@ header h1 {
         font-size: 18px;
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
+
+    .modal {
+        position: absolute;
+        top : 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modalcontent {
+        position: relative;
+        background: #fff;
+        width: 500px;
+        max-width: 90%;
+        padding: 1em 2em;
+        border-radius: 4px;
+    }
+    
+     a {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    
+    .modalcontent > h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalcontent > img {
+       object-fit: cover;
+       width: 50dvw;
+       height: auto;
+       padding: 2.5em;
+    
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    .modalcontent > p {
+        margin: 2em;
+    }
+    
+    .modalclose {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: #585858;
+        text-decoration: none;
+        font-size: 36px;
+    }
 }
 
 /* Desktop view */
@@ -224,6 +288,69 @@ header h1 {
     .navlogo > a > img {
         width: 3dvw;
     }
+
+    .modal {
+        position: absolute;
+        top : 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .modalcontent {
+        position: relative;
+        background: #fff;
+        width: 500px;
+        max-width: 90%;
+        padding: 1em 2em;
+        border-radius: 4px;
+    }
+
+     a {
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .modalcontent > h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalcontent > img {
+       width: 20dvw;
+       padding: 2.5em;
+
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .modalcontent > p {
+        margin: 2em;
+    }
+
+    .modalclose {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: #585858;
+        text-decoration: none;
+        font-size: 36px;
+    }
+
 }
 
 /* Container for flexbox positioning of each .contentbox in relation to the page/each other */

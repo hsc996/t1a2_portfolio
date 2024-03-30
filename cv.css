@@ -239,6 +239,11 @@ main * {
         align-items: center;
     }
 
+    body > main > .content > .cv > img {
+        width: 60dvw;
+        height: auto;
+    }
+
     footer {
         width: 10dvw;
     }
