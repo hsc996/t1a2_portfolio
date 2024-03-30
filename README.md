@@ -42,9 +42,10 @@ The subheadings listed with the '>' icon symbolise links/buttons that will navig
 
 Please see the Sitemap above for the visual representation of how to navigate the website. I've colour coded the sitmap for clarity. The home page is pink -- this is the epicenter as it is the first/main page with the navbar on it. The navbar is in orange -- it leads to the other 5 main categories, which are highlighted in light blue. The contact icons are navy blue, and can be seen on the main page and contact page. The projects are in green and the blog posts in burgundy. The CV page is in purple, and can only be accessed via the "Experience" page.
 
+## Wireframes
+
 ![wireframe.desktop](screenshots/T1A2wireframe_desktop.png)
 ![wireframe.mobile](screenshots/T1A2wireframe_mobile.png)
-
 
 ## Website description
 
@@ -54,7 +55,7 @@ The purpose of this website is to provide prospective employers and professional
 ## Home Page
 
 ![home.mobile1](screenshots/homepage_mobile.png)
-![home.mobile2](screenshots/homepage_mobile2-1.png)
+![home.mobile2](screenshots/homepage_mobile2.png)
 
 The screenshot above displays the mobile view of the home page. I've used a custom colour palette consisting of 5 colours throughout every page to promote a common theme throughout the website. You'll see this stored in the root:{} selector at the top of each CSS stylesheet so it can be reference easily throughout the code. For the same reason, the header and footer span across the top and bottom of every page, in the same colour.
 
@@ -83,7 +84,7 @@ Lastly, I've included a 4 more graphic components in a row. I've utilised widely
 
 The screenshots above, I've provided split images of the desktop view of the home page. As you can see, I've used flexbox styling for all text and graphical components of the page to ensure responsiveness to all screen sizes. Futhermore, you can see that, as the page expands to full screen, the toggle bar transforms into a text menu embedded into the header.
 
-![desktop.nav](screenshots/homepage_mobile.pngdesktop_nav.png)
+![desktop.nav](screenshots/desktop_nav.png)
 
 In this screenshot, you can see I've added padding and box-shadow to animate the titles when hovered-over with the cursor. This provides the impression that the titles are "jumping out" of the page. I've employed these properties to engage the user and provide clarity regarding the function of these link buttons.
 
@@ -96,7 +97,7 @@ Above are the screenshots of the "About Me" page.I've opted for a simple aesthet
 
 At the bottom of the page, one can see I've added padding and rounded the border of the word "experience". This is to elucidate to the user that this section contains button functionality, as it is a hyperlink to the page contianing my CV. I've provided further clarity of this by providing a box-shadow when hovered-over with the cursor in desktop view.
 
-I'm employed semantic elements throughout the html code in order to easily section off all text and graphical elements: when viewing the website, one can see this even-spacing: I've encapsulated the main title with a <h1> tag, each paragraph with <p> tags and the image with an <article> tag to separate them and make each component easy to position independently. Furthermore, these semantic elements will provide context and clarity to anyone viewing the source code.
+I'm employed semantic elements throughout the html code in order to easily section off all text and graphical elements: when viewing the website, one can see this even-spacing: I've encapsulated the main title with a <h1></h1> tag, each paragraph with <p></p> tags and the image with an <article></article> tag to separate them and make each component easy to position independently. Furthermore, these semantic elements will provide context and clarity to anyone viewing the source code.
 
 The CV page contains nothing more than an image of my mock CV. Ideally, I would have transferred the content of the CV image onto the page as it would allow me to increase the text size to enhance visibiliy of the content. Unfortunately, I was unable to do this as the image was exported using Canva in image form.
 
