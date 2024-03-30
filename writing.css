@@ -29,7 +29,7 @@ main * {
 }
 
 main {
-    min-height: 350dvh;
+    min-height: 600dvh;
 }
 
 /* Here I've overriden the header with a div tag and class selector in order to isolate the main title + style it independent of the main header -- I've used flexbox to position the title to the right of the page */
@@ -213,7 +213,7 @@ section > h2 {
 /* Desktop view */
 @media screen and (min-width:800px) {
     main {
-        min-height: 750dvh;
+        min-height: 800dvh;
     }
  
      header > .maintitle {
@@ -375,7 +375,7 @@ button {
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100dvw;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;

@@ -331,7 +331,7 @@ header h1 {
 
     .modalcontent > img {
        width: 20dvw;
-       padding: 2.5em;
+       margin-left: 6.5em;
 
        display: flex;
        justify-content: center;
