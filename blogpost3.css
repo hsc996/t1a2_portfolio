@@ -27,7 +27,6 @@ main * {
 /* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
     min-height: 92dvh;
-    width: 70dvw;
 }
 
 main > section {
@@ -51,7 +50,6 @@ aside {
     justify-content: center;
     align-items: center;
 
-    margin-left: 2.5em;
     margin-bottom: 3em;
 }
 
@@ -59,21 +57,33 @@ aside {
     width: 35dvw;
     height: auto;
     object-fit: cover;
-    padding-left: 5em;
 }
 
 .photo2 {
-    width: 30dvw;
+    width: 35dvw;
     height: auto;
     object-fit: cover;
 }
 
+.content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
 section {
     width: 65dvw;
-    padding-left: 2em;
 }
 
 header h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
     padding-top: 2em;
     padding-left: 2em;
     padding-right:3em;
@@ -101,7 +111,6 @@ header h3 {
 .header {
     position: relative;
     width: 100%;
-    height: 5dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,12 +270,7 @@ header h3 {
 }
 
 /* Desktop view */
-@media screen and (min-width: 600px) {
-    .header {
-        height: 8dvh;
-        width: 100%;
-    }
-    
+@media screen and (min-width: 800px) {    
     .navlogo > a > img {
         width: 3dvw;
     }
@@ -294,7 +298,7 @@ header h3 {
         justify-content: center;
         align-items: center;
 
-        padding-left: 16em;
+        width: 60dvw;
     }
 
     main > .content > p {
@@ -310,22 +314,16 @@ header h3 {
 
     aside {
         margin-top: 3em;
+        margin-bottom:  3em;
     }
 
     .photo1 {
         width: 30dvw;
         height: 50dvh;
         object-fit: cover;
-        padding-left: 30em;
     }
     
     .photo2 {
-        width: 30dvw;
-        height: 50dvh;
-        object-fit: cover;
-    }
-
-    .photo3 {
         width: 30dvw;
         height: 50dvh;
         object-fit: cover;

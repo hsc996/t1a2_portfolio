@@ -59,7 +59,6 @@ main > .wrapper > .content {
 .header {
     position: relative;
     width: 100%;
-    height: 5dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,7 +218,7 @@ main > .wrapper > .content {
 }
 
 /* Desktop view */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
    body > main > .wrapper > article {
     display: flex;
     flex-direction: column;
@@ -235,10 +234,6 @@ main > .wrapper > .content {
 
     header > h1 {
         font-size: 7vw;
-    }
-
-    .header {
-        height: 8dvh;
     }
     
     .navlogo > a > img {

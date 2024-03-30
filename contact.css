@@ -25,7 +25,6 @@ body {
 
 main {
     min-height: 92dvh;
-    min-width: 50dvw;
 }
 
 /* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
@@ -50,7 +49,6 @@ header > .maintitle {
 .header {
     position: relative;
     width: 100dvw;
-    height: 5dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -177,7 +175,7 @@ header > .maintitle {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:900px) {
+@media screen and (max-width:800px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -210,9 +208,9 @@ header > .maintitle {
 }
 
 /* Desktop view */
-@media screen and (min-width:600px) {
+@media screen and (min-width:800px) {
     .header {
-        height: 8dvh;
+        height: 10dvh;
     }
 
     .navlogo > a > img {
@@ -232,7 +230,6 @@ header > .maintitle {
         align-items: center;
     }
 }      
-
 
  .contactinfo {
     display: flex;
@@ -277,7 +274,7 @@ main > .iconcontentrow > .iconpreview {
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100dvw;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;

@@ -218,7 +218,7 @@ main * {
  /* Desktop view */
 @media screen and (min-width: 600px) {
     .header {
-        height: 8dvh;
+        height: 10dvh;
     }
     
     .navlogo > a > img {

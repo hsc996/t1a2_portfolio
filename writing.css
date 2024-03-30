@@ -213,7 +213,7 @@ section > h2 {
 /* Desktop view */
 @media screen and (min-width:800px) {
     main {
-        min-height: 800dvh;
+        min-height: 850dvh;
     }
  
      header > .maintitle {
@@ -262,7 +262,7 @@ section > h2 {
 
      /* Resizing of main title */
      .header {
-        height: 8dvh;
+        height: 10dvh;
     }
     
     /* Resizing of  logo */

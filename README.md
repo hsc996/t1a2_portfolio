@@ -27,6 +27,7 @@ Please see the Sitemap attached for the visual representation of how to navigate
     > Blog #2
     > Blog #3
     > Blog #4
+    > Blog #5
 + Contact
      > Icon links:
         1. Twitter
@@ -35,9 +36,12 @@ Please see the Sitemap attached for the visual representation of how to navigate
         4. Instgram
 
 **Insert link to deloyed website**
-**Link to GitHub repository**
+Github Repositiory - t1a2_portfolio: https://github.com/hsc996/t1a2_portfolio
 
 ## Website description
+
+The purpose of this website is to provide prospective employers and professional connections with insight into my experience, who I am and who I aspire to be. I've employed
+
 
 - Purpose
 - Functionality

@@ -282,7 +282,7 @@ header h1 {
      }
 
      .header {
-        height: 8dvh;
+        height: 10dvh;
     }
     
     .navlogo > a > img {
@@ -396,7 +396,7 @@ header h1 {
 footer {
     background-color: var(--bittersweet);
     height: 3dvh;
-    width: 100dvw;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
