@@ -48,7 +48,7 @@ header > .maintitle {
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
-    width: 100dvw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -237,7 +237,7 @@ header > .maintitle {
     justify-content: left;
     margin-top: 5dvh;
  }
-
+ 
  /* Container for flexbox positioning of icons in a row */
  main > .iconcontentrow {
     display: flex;

@@ -40,7 +40,7 @@ Github Repositiory - t1a2_portfolio: https://github.com/hsc996/t1a2_portfolio
 
 ## Website description
 
-The purpose of this website is to provide prospective employers and professional connections with insight into my experience, who I am and who I aspire to be. I've employed
+The purpose of this website is to provide prospective employers and professional connections with insight into my experience, who I am and who I aspire to be. This website will prove as a professional platform to showcase my interests, passions, skills, experience, aspirations and values.
 
 
 - Purpose
