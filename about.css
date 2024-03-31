@@ -58,6 +58,7 @@ main > .wrapper > .content {
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
+    height: 5dvh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -219,7 +220,11 @@ main > .wrapper > .content {
 
 /* Desktop view */
 @media screen and (min-width: 800px) {
-   body > main > .wrapper > article {
+    .header {
+        height: 8dvh;
+    }
+
+    body > main > .wrapper > article {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -100,6 +100,7 @@ header h3 {
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
+    height: 5dvh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -262,7 +263,7 @@ header h3 {
 /* Desktop view */
 @media screen and (min-width: 800px) {
     .header {
-        height: 10dvh;
+        height: 8dvh;
         width: 100%;
     }
     
@@ -276,7 +277,7 @@ header h3 {
         justify-content: center;
         align-items: center;
 
-        font-size: 7dvh;
+        font-size: 5dvh;
         padding-top: 2em;
         padding-left: 3em;
         padding-bottom: 2em;
@@ -298,7 +299,7 @@ header h3 {
         justify-content: center;
         align-items: center;
 
-        padding-left: 17em;
+        padding-left: 10em;
     }
 
     main > .content > p {
@@ -317,16 +318,16 @@ header h3 {
     }
 
     .photo1 {
+        position: relative;
         width: 35dvw;
         height: 60dvh;
-        object-fit: cover;
-        padding-left: 30em;
+        padding-left: 20em;
     }
     
     .photo2 {
+        position: relative;
         width: 25dvw;
         height: 60dvh;
-        object-fit: cover;
     }
 }
 
