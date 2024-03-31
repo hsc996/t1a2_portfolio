@@ -127,8 +127,36 @@ The project preview boxes have minimal information, merely an image and title, b
 ![proj.desktop](docs/proj_desktop.png)
 ![proj.desktop2](docs/proj_desktop2.png)
 
-These screenshots display this page in desktop view: one can see the display change as the content boxes wrap into a row and remain centered. When added to, this will create a clean grid system of project previews for the user to select from. The only other difference in this view is the navigation bar which has been previously explained.
+These screenshots display this page in desktop view: one can see the display change as the content boxes wrap into a row and remain centered. When added to, this will create a clean grid system of project previews for the user to select from.
+
+![proj.hover](docs/proj_hover.png)
+
+Furthermore, I've animated the border to expand laterally when hovered-over with the cursor in desktop view. This will intentionally direct the user's attention to these box components, subsequently highlighting their significance. This can be seen in the screenshot above.
+
+The only other difference in this view is the navigation bar which has been previously explained.
 
 
 ## Writing Page
+
+![writing.mobile1](docs/writing_mobile1.png)
+![writing.mobile2](docs/writing_mobile2.png)
+![writing.mobile3](docs/writing_mobile3.png)
+
+The purpose of the "writing" page is to showcase 5 blog post previews. The blog post themselves are on separater pages and can be accessed via the button at the bottom of each preview box. These blog posts are designed to provide the audience with an idea into my personal interests, passions and insights. 
+
+In mobile view, I've decided to position the title on the right using the "align-items: flex-end".
+
+Each context box contains a title, image, date published and text box containing the first paragraph of the blog post. Each box employs the same colour-coding for each of these elements to promote a consistent theme. Each content box includes a "read me" button, linking to the corresponding blog page, each containing the full article and 2 graphical components.
+
+![readmore.button](docs/readmore_button.png)
+
+The screenshot above displays the way in which the button transforms when hovered-over: I've capitilized the text and changed the font colour. This is designed to redirect the user's attention + elucidate the functionality of this button.
+
+![writing.desktop1](docs/writing_desktop1.png)
+![writing.desktop2](docs/writing_desktop2.png)
+![writing.desktop3](docs/writing_desktop3.png)
+
+
+## Contact Page
+
 
