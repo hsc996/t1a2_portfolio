@@ -53,11 +53,11 @@ The first screenshot outlines my intended design for the desktop view and the se
 
 ## Tech Stack
 
-> **Deployment:** Netlify
-> **CV:** Canva
-> **Editor:** Visual Studio Code
-> **Repository:** Github
-> **Programming Languages:** HTML, CSS
+>  **Deployment:** Netlify
+>  **CV:** Canva
+>  **Editor:** Visual Studio Code
+>  **Repository:** Github
+>  **Programming Languages:** HTML, CSS
 
 
 ## Website description
