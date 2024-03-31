@@ -49,14 +49,15 @@ Please see the Sitemap above for the visual representation of how to navigate th
 ![wireframe.desktop](src/docs/T1A2wireframe_desktop.png)
 ![wireframe.mobile](src/docs/T1A2wireframe_mobile.png)
 
+The first screenshot outlines my intended design for the desktop view and the second in mobile view. The images are represented by the dark grey boxes, while the smaller grey boxes represent the contact icons. The black box in the top left corner of the desktop view represents the website logo -- I completed the mobile wireframe before deciding to add this detail, which is why you'll see it not included there. For large bodies of text, I've used "lorem" as placeholder text. I've added 3 white lines to the top right corner to indicate the hamburger toggle menu.
 
 ## Tech Stack
 
--Deployment:- Netlify
--CV:- Canva
--Editor:- Visual Studio Code
--Repository:- Github
--Programming Languages:- HTML, CSS
+> **Deployment:** Netlify
+> **CV:** Canva
+> **Editor:** Visual Studio Code
+> **Repository:** Github
+> **Programming Languages:** HTML, CSS
 
 
 ## Website description
@@ -69,7 +70,7 @@ The purpose of this website is to provide prospective employers and professional
 ![home.mobile1](src/docs/homepage_mobile.png)
 ![home.mobile2](src/docs/homepage_mobile2.png)
 
-The screenshot above displays the mobile view of the home page. I've used a custom colour palette consisting of 5 colours throughout every page to promote a common theme throughout the website. You'll see this stored in the root:{} selector at the top of each CSS stylesheet so it can be reference easily throughout the code. For the same reason, the header and footer span across the top and bottom of every page, in the same colour.
+The screenshot above displays the mobile view of the home page. I've used a custom colour palette consisting of 5 colours throughout every page to promote a common theme throughout the website. You'll see this stored in the root:{} selector at the top of each CSS stylesheet so it can be reference easily throughout the code. For the same reason, the header and footer span across the top and bottom of every page, in the same colour. Throughout the website, you'll see ensured accessibility by creating contrast been the fonts and their respective backgrounds, ensuring the content is easily visible at all times.
 
 Within the footer, one is able to see my name with a copyright symbol and the year. This will inform the target audience that the content within the website is my intellectual property, as well as making the website look more professional. At the top left corner, i've added a custom logo to the header in order to promote a professional outlook.
 

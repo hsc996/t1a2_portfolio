@@ -28,6 +28,7 @@ main * {
     margin: 1em;
 }
 
+/* I've set the min-height as 92dvh, as the height of the header + footer combined makes 7dvh -- making it up to 100dvh total. I've employed flexbox here to centre the content in the "main" section + make it responsive */
 main {
     min-height: 92vh;
     width: 70dvw;
@@ -46,6 +47,7 @@ header h1 {
     flex-wrap: wrap;
 }
 
+/* Use of ".content" selector as flexbox container */
 main > .wrapper > .content {
     min-width: 70dvw;
 
@@ -74,6 +76,7 @@ main > .wrapper > .content {
     display: block;
 }
 
+/* Styling of logo image in header */
 .navlogo > a > img {
     display: block;
     width: 8vw;
@@ -88,6 +91,7 @@ main > .wrapper > .content {
     align-items: center;
 }
 
+/* Menu stlying */
 .menu {
     display: flex;
     justify-content: center;
