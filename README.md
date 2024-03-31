@@ -49,6 +49,15 @@ Please see the Sitemap above for the visual representation of how to navigate th
 ![wireframe.mobile](docs/T1A2wireframe_mobile.png)
 
 
+## Tech Stack
+
+-Deployment:- Netlify
+-CV:- Canva
+-Editor:- Visual Studio Code
+-Repository:- Github
+-Programming Languages:- HTML, CSS
+
+
 ## Website description
 
 The purpose of this website is to provide prospective employers and professional connections with insight into my experience, who I am and who I aspire to be. This website will prove as a professional platform to showcase my interests, passions, skills, experience, aspirations and values. I've opted for a mobile-first approach to my development to ensure optimization of mobile view of the website, increase user engagement and enhance SEO performance. From this, I have then utilised the @media rule to adapt the layout of the components -- I will be providing screenshots of both views in the descriptions below.
@@ -159,4 +168,14 @@ The screenshot above displays the way in which the button transforms when hovere
 
 ## Contact Page
 
+![contact.mobile](docs/contact_mobile.png)
 
+Above is a screenshot of the contact page in mobile view. I've kept the aesthic clean and simple.
+It displays a placeholder address and contact number, as well as the contatc icon links that were explained during the home page description.
+
+![alt text](docs/contact_desktop1.png)
+![alt text](docs/contact_desktop2.png)
+
+## Conclusion
+
+In summary, the purpose of this website is to provide a professional platform for employers, clients and fellow developers. The content not only showcases my past projects and skills but promotes the way in which I value collaboration. Through my extensive description of each page, I have demonstrated my rationale for employing semantic elements, flexbox, animation and color-coding to position and style this website: that being, to enhance user engagement, improve SEO and promote readability and accessibility.
