@@ -1,6 +1,7 @@
 # T1A2 Portfolio Assessment
 
-Deployed website: https://main--t1a2portfolioassignment.netlify.app/
+Deployed website: https://hjscaife.com
+
 Github Repositiory: t1a2_portfolio: https://github.com/hsc996/t1a2_portfolio
 
 
