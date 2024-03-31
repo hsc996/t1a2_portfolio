@@ -1,8 +1,13 @@
 # T1A2 Portfolio Assessment
 
+
+## Links
+
 Deployed website: https://hjscaife.com
 
-Github Repositiory: t1a2_portfolio: https://github.com/hsc996/t1a2_portfolio
+Github Repositiory: https://github.com/hsc996/t1a2_portfolio
+
+Video Presentation: https://vimeo.com/929231004?share=copy
 
 
 ## Sitemap
@@ -57,7 +62,8 @@ The first screenshot outlines my intended design for the desktop view and the se
 >  **CV:** Canva
 >  **Editor:** Visual Studio Code
 >  **Repository:** Github
->  **Programming Languages:** HTML, CSS
+>  **Languages:** HTML, CSS, Markdown
+> **Mockups:** draw.io, Figma
 
 
 ## Website description
