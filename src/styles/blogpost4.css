@@ -106,7 +106,7 @@ header h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
     opacity: 85%;
@@ -229,7 +229,7 @@ header h3 {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -245,7 +245,7 @@ header h3 {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -262,7 +262,7 @@ header h3 {
 }
 
 /* Desktop view */
-@media screen and (min-width: 800px) {
+@media screen and (min-width:768px) {
     .navlogo > a > img {
         width: 3dvw;
     }
@@ -316,7 +316,7 @@ header h3 {
 
  /* Footer styling -- will appear across all pages */
 footer {
-    background-color: var(--bittersweet);
+    background-color: var(--verdigris);
     height: 3dvh;
     width: 100%;
     text-align: center;

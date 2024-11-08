@@ -17,10 +17,6 @@ font-family: "Rethink Sans", san-serif;
 /* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
@@ -28,18 +24,77 @@ main * {
     margin: 1em;
 }
 
+/* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
-    min-height: 94dvh;
+    min-height: 92dvh;
+    width: 70dvw;
 }
 
-/* Styling + positioning of main title */
-header h1 {
-    font-size: 13vw;
-    padding-top: 0.75em;
+main > section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Semantic element "aside" used to position main images side by side in mobile view */
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 2.5em;
+    margin-bottom: 3em;
+}
+
+.photo1 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
+    padding-left: 5em;
+}
+
+.photo2 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
+}
+
+section {
+    width: 65dvw;
+    padding-left: 2em;
+}
+
+header h2 {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right:3em;
+}
+
+header h3 {
+    padding-left: 3.5em;
+    padding-top: 1em;
+
+    font-size: 3dvw;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    font-style: italic;
 }
 
  /* Positioning and styling of main header at top of page */
@@ -50,10 +105,10 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
-    opacity: 85%
+    opacity: 85%;
 }
 
 /* Custom logo in header */
@@ -82,7 +137,6 @@ header h1 {
     align-items: center;
     z-index: 1;
     transition: 0.5s;
-    opacity: 85%;
 }
 
 .menu li {
@@ -148,7 +202,9 @@ header h1 {
 }
 
 .hamburger,
-.toggle-menu {display: none;}
+.toggle-menu {
+    display: none;
+}
 
 .dropdown input:checked ~ .hamburger {
     background: transparent;
@@ -172,7 +228,7 @@ header h1 {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -188,7 +244,7 @@ header h1 {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -198,203 +254,86 @@ header h1 {
     }
     .menu li a,
     .menu li a:hover {
-        padding: 30px;
-        font-size: 18px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-    }
-
-    .modal {
-        position: absolute;
-        top : 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(77, 77, 77, 0.7);
-        transition: all 0.4s;
-        visibility: hidden;
-        opacity: 0;
-    }
-    
-    .modal:target {
-        visibility: visible;
-        opacity: 1;
-    }
-    
-    .modalcontent {
-        position: relative;
-        background: #fff;
-        width: 500px;
-        max-width: 90%;
-        padding: 1em 2em;
-        border-radius: 4px;
-    }
-    
-     a {
-        font-size: 21px;
-        font-weight: 600;
-    }
-    
-    .modalcontent > h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .modalcontent > img {
-       object-fit: cover;
-       width: 50dvw;
-       height: auto;
-       padding: 2.5em;
-    
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-    
-    .modalcontent > p {
-        margin: 2em;
-    }
-    
-    .modalclose {
-        position: absolute;
-        top: 0;
-        right: 15px;
-        color: #585858;
-        text-decoration: none;
-        font-size: 36px;
+    padding: 30px;
+    font-size: 18px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
 
 /* Desktop view */
-@media screen and (min-width: 600px) {
-    body > main > article {
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         align-items: center;
-    }
- 
-     header > h1 {
-         font-size: 7vw;
-     }
-
-     .header {
+@media screen and (min-width:768px) {
+    .header {
         height: 8dvh;
+        width: 100%;
     }
     
     .navlogo > a > img {
         width: 3dvw;
     }
 
-    .modal {
-        position: absolute;
-        top : 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+    header > h2 {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        background: rgba(77, 77, 77, 0.7);
-        transition: all 0.4s;
-        visibility: hidden;
-        opacity: 0;
+        align-items: center;
+
+        font-size: 5dvh;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-bottom: 2em;
     }
 
-    .modal:target {
-        visibility: visible;
-        opacity: 1;
+    header > h3 {
+        font-size: 3dvh;
+        padding-right: 8em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 
-    .modalcontent {
+    main > .content > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 10em;
+    }
+
+    main > .content > p {
+        align-items: flex-end;
+    }
+
+    main > aside > {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        margin-top: 3em;
+    }
+
+    .photo1 {
         position: relative;
-        background: #fff;
-        width: 500px;
-        max-width: 90%;
-        padding: 1em 2em;
-        border-radius: 4px;
+        width: 35dvw;
+        height: 60dvh;
+        padding-left: 20em;
     }
-
-     a {
-        font-size: 21px;
-        font-weight: 600;
+    
+    .photo2 {
+        position: relative;
+        width: 25dvw;
+        height: 60dvh;
     }
-
-    .modalcontent > h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modalcontent > img {
-       width: 20dvw;
-       margin-left: 6.5em;
-
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-
-    .modalcontent > p {
-        margin: 2em;
-    }
-
-    .modalclose {
-        position: absolute;
-        top: 0;
-        right: 15px;
-        color: #585858;
-        text-decoration: none;
-        font-size: 36px;
-    }
-
-}
-
-/* Container for flexbox positioning of each .contentbox in relation to the page/each other */
-.projectPreview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; 
-}
-
-/* Styling of image link */
-.projectPreview > a > img {
-    max-width: 65dvw;
-
-    transition: 1s;
-    height: 20dvh;
-    width: 20dvh;
-    row-gap: 1em;
-    padding: 1em;
-    background-color: var(--verdigris);
-    border-radius: 2em;
-    box-shadow: 0.5em 0.5em rgba(47, 86, 86, 0.502)
-}
- /* Animation of iage link when hovered over */
-.projectPreview > a >img:hover {
-    border-radius: 0;
-    padding: 15px 30px 15px 30px;
-}
-
-/* Flexbox positioning of content row */
-.contentRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 60dvw;
-    min-height: 100dvh;
 }
 
  /* Footer styling -- will appear across all pages */
 footer {
-    background-color: var(--bittersweet);
+    background-color: var(--verdigris);
     height: 3dvh;
     width: 100%;
     text-align: center;

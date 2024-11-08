@@ -47,7 +47,7 @@ main {
 header .maintitle {
     font-size: 13vw;
     padding: 1em;
-    text-shadow: 7px 7px 11px var(--verdigris);
+    text-shadow: 7px 7px 11px var(--cerulean);
 }
 
  /* Positioning and styling of main header at top of page */
@@ -58,7 +58,7 @@ header .maintitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
     opacity: 85%;
@@ -181,7 +181,7 @@ header .maintitle {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -197,7 +197,7 @@ header .maintitle {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -211,10 +211,19 @@ header .maintitle {
     font-size: 18px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
+
+    footer {
+        padding: 0.5em 0; /* Reduce padding for smaller screens */
+        justify-content: center; /* Ensure text stays centered */
+    }
+
+    footer h6 {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
 }
 
 /* Desktop view */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     * {
         margin: 0;
     }
@@ -235,6 +244,10 @@ header .maintitle {
     
     .navlogo > a > img {
         width: 3dvw;
+    }
+
+    footer h6 {
+        font-size: 1.2rem;
     }
 }
 
@@ -280,13 +293,38 @@ header .maintitle {
     padding: 0.1em 0.1em 0.1em;
 }
 
- /* Footer styling -- will appear across all pages */
+/* General Footer Styling */
 footer {
-    background-color: var(--bittersweet);
-    height: 3dvh;
-    width: 100dvw;
+    background-color: var(--verdigris); /* Your chosen color variable */
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%; /* Full width of the viewport */
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em 0; /* Padding added for better spacing */
+}
+
+/* Footer Text Styling */
+footer h6 {
+    margin: 0; /* Remove any default margins */
+    font-size: 1rem; /* Default font size */
+}
+
+/* Desktop View (screens 768px and larger) */
+@media (min-width: 768px) {
+    footer h6 {
+        font-size: 1.2rem; /* Slightly larger font size for desktop */
+    }
+}
+
+/* Mobile View (screens smaller than 768px) */
+@media (max-width: 767px) {
+    footer {
+        padding: 0.5em 0; /* Reduce padding for smaller screens */
+    }
+
+    footer h6 {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
 }

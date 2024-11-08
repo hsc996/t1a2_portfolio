@@ -28,13 +28,8 @@ main * {
     margin: 1em;
 }
 
-/* I've set the min-height as 92dvh, as the height of the header + footer combined makes 7dvh -- making it up to 100dvh total. I've employed flexbox here to centre the content in the "main" section + make it responsive */
 main {
-    min-height: 92vh;
-    width: 70dvw;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
+    min-height: 94dvh;
 }
 
 /* Styling + positioning of main title */
@@ -47,16 +42,6 @@ header h1 {
     flex-wrap: wrap;
 }
 
-/* Use of ".content" selector as flexbox container */
-main > .wrapper > .content {
-    min-width: 70dvw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
@@ -65,10 +50,10 @@ main > .wrapper > .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
-    opacity: 85%;
+    opacity: 85%
 }
 
 /* Custom logo in header */
@@ -76,7 +61,6 @@ main > .wrapper > .content {
     display: block;
 }
 
-/* Styling of logo image in header */
 .navlogo > a > img {
     display: block;
     width: 8vw;
@@ -91,7 +75,6 @@ main > .wrapper > .content {
     align-items: center;
 }
 
-/* Menu stlying */
 .menu {
     display: flex;
     justify-content: center;
@@ -99,6 +82,7 @@ main > .wrapper > .content {
     align-items: center;
     z-index: 1;
     transition: 0.5s;
+    opacity: 85%;
 }
 
 .menu li {
@@ -164,9 +148,7 @@ main > .wrapper > .content {
 }
 
 .hamburger,
-.toggle-menu {
-    display: none;
-}
+.toggle-menu {display: none;}
 
 .dropdown input:checked ~ .hamburger {
     background: transparent;
@@ -190,7 +172,7 @@ main > .wrapper > .content {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -206,7 +188,7 @@ main > .wrapper > .content {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -216,91 +198,196 @@ main > .wrapper > .content {
     }
     .menu li a,
     .menu li a:hover {
-    padding: 30px;
-    font-size: 18px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+        padding: 30px;
+        font-size: 18px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    }
+
+    .modal {
+        position: absolute;
+        top : 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modalcontent {
+        position: relative;
+        background: #fff;
+        width: 500px;
+        max-width: 90%;
+        padding: 1em 2em;
+        border-radius: 4px;
+    }
+    
+     a {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    
+    .modalcontent > h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalcontent > .modal-body > img {
+        max-width: 80%;
+        height: auto;
+    }
+    
+    .modalcontent > p {
+        margin: 2em;
+    }
+    
+    .modalclose {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: #585858;
+        text-decoration: none;
+        font-size: 36px;
     }
 }
 
 /* Desktop view */
-@media screen and (min-width: 800px) {
-    .header {
+@media screen and (min-width: 768px) {
+    body > main > article {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+    }
+ 
+     header > h1 {
+         font-size: 7vw;
+     }
+
+     .header {
         height: 8dvh;
-    }
-
-    body > main > .wrapper > article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-   }
-   
-    body > main > .wrapper > article > img {
-        width: 35dvw;
-        height: auto;
-    }
-
-    header > h1 {
-        font-size: 7vw;
     }
     
     .navlogo > a > img {
         width: 3dvw;
     }
 
-    .cvlink {
+    .modal {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modalcontent {
+        position: relative;
+        background: #fff;
+        width: 500px;
+        max-width: 90%;
+        padding: 1em 2em;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    .modal-body {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    
+    .modalcontent > h1 {
+        margin-bottom: 1em;
+    }
+    
+    .modalcontent > .modal-body > img {
+        max-width: 80%;
+        height: auto;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    /* Hover animation for desktop view only */
-    body > main > .wrapper > .cvlink > a:hover {
-        box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
+    
+    .modalcontent > p {
+        margin: 1em 0;
     }
+    
+    .modalclose {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: #585858;
+        text-decoration: none;
+        font-size: 36px;
+    }    
+
 }
 
-/* Positioning + styling of main image */
-main > .wrapper > article > img {
-    height: auto;
-    width: 70dvw;
-    object-fit: cover;
-    margin-bottom: 1em;
-}
-
-/* Container for flexbox positioning of CV link */
-.cvlink {
+/* Container for flexbox positioning of each .contentbox in relation to the page/each other */
+.projectPreview {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; 
 }
 
-/* Styling of CV link to appear as button for visibility */
-main > .wrapper > .cvlink > a {
-    background-color: var(--bittersweet);
-    color: var(--light-orange);
-    text-decoration: none;
-    font-weight: bolder;
-    font-style: italic;
+/* Styling of image link */
+.projectPreview > a > img {
+    max-width: 65dvw;
+
+    transition: 1s;
+    height: 20dvh;
+    width: 20dvh;
+    row-gap: 1em;
     padding: 1em;
+    background-color: var(--verdigris);
     border-radius: 2em;
-    opacity: 85%;
+    box-shadow: 0.5em 0.5em rgba(47, 86, 86, 0.502)
+}
+ /* Animation of iage link when hovered over */
+.projectPreview > a >img:hover {
+    border-radius: 0;
+    padding: 15px 30px 15px 30px;
 }
 
-/* Flexbox positioning of paragraph content */
-.wrapper > .content {
+/* Flexbox positioning of content row */
+.contentRow {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 60dvw;
+    min-height: 100dvh;
 }
 
  /* Footer styling -- will appear across all pages */
 footer {
-    background-color: var(--bittersweet);
+    background-color: var(--verdigris);
     height: 3dvh;
     width: 100%;
     text-align: center;

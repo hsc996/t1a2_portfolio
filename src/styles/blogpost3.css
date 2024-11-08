@@ -19,48 +19,102 @@ body {
     background-color: var(--light-yellow);
 }
 
+/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
+main * {
+    margin: 1em;
+}
+
 /* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
-    min-height: 100dvh;
+    min-height: 92dvh;
+}
 
+main > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Semantic element "aside" used to position main images side by side in mobile view */
+aside {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 3em;
+}
+
+.photo1 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo2 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
 }
 
 .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+section {
+    width: 65dvw;
+}
+
+header h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.content > .cv > {
+h2 {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right:3em;
+}
+
+header h3 {
+    padding-left: 3.5em;
+    padding-top: 1em;
+
+    font-size: 3dvw;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content > p {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    justify-content: flex-end;
+    align-items: flex-end;
 
-.content > .cv > img {
-    width: 100dvw;
-    height: auto;
-}
-
-/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
-main * {
-    margin: 2em;
+    font-style: italic;
 }
 
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
-    height: 5dvh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
     opacity: 85%;
@@ -183,7 +237,7 @@ main * {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -199,7 +253,7 @@ main * {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -215,43 +269,70 @@ main * {
     }
 }
 
- /* Desktop view */
-@media screen and (min-width: 600px) {
-    .header {
-        height: 8dvh;
-    }
-    
+/* Desktop view */
+@media screen and (min-width:768px) {    
     .navlogo > a > img {
         width: 3dvw;
     }
 
-    body > main > .content {
+    header > h2 {
+        font-size: 5dvh;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-bottom: 2em;
+    }
+
+    header > h3 {
+        font-size: 3dvh;
+        padding-right: 8em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    main > .content > section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
 
-    body > main > .content > .cv > {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    body > main > .content > .cv > img {
         width: 60dvw;
-        height: auto;
     }
 
-    footer {
-        width: 10dvw;
+    main > .content > p {
+        align-items: flex-end;
+    }
+
+    main > aside > {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        margin-top: 3em;
+        margin-bottom:  3em;
+    }
+
+    .photo1 {
+        width: 30dvw;
+        height: 50dvh;
+        object-fit: cover;
+    }
+    
+    .photo2 {
+        width: 30dvw;
+        height: 50dvh;
+        object-fit: cover;
     }
 }
 
  /* Footer styling -- will appear across all pages */
 footer {
-    background-color: var(--bittersweet);
+    background-color: var(--verdigris);
     height: 3dvh;
     width: 100%;
     text-align: center;

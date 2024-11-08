@@ -17,10 +17,6 @@ font-family: "Rethink Sans", san-serif;
 /* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
@@ -28,35 +24,87 @@ main * {
     margin: 1em;
 }
 
+/* I've set the minimum height with a dvh unit to facilite responsiveness depending on different screen sizes */
 main {
-    min-height: 600dvh;
+    min-height: 92dvh;
+    width: 70dvw;
 }
 
-/* Here I've overriden the header with a div tag and class selector in order to isolate the main title + style it independent of the main header -- I've used flexbox to position the title to the right of the page */
-header .maintitle {
-    font-size: 13vw;
-    padding: 0.75em;
-
+main > section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
-/* Styling subheading */
-section > h2 {
-    margin-left: 3em;
-    margin-right: 3em;
+
+.content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Semantic element "aside" used to position main images side by side in mobile view */
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 2.5em;
+    margin-bottom: 3em;
+}
+
+.photo1 {
+    width: 35dvw;
+    height: auto;
+    object-fit: cover;
+    padding-left: 5em;
+}
+
+.photo2 {
+    width: 30dvw;
+    height: auto;
+    object-fit: cover;
+}
+
+section {
+    width: 65dvw;
+    padding-left: 2em;
+}
+
+header h2 {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right:3em;
+}
+
+header h3 {
+    padding-left: 3.5em;
+    padding-top: 1em;
+
+    font-size: 3dvw;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    font-style: italic;
 }
 
  /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
-    height: 5dvh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bittersweet);
+    background: var(--verdigris);
     padding: 0 25px;
     transition: 0.3s;
     opacity: 85%;
@@ -179,7 +227,7 @@ section > h2 {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .hamburger,
     .toggle-menu {
     display: block;
@@ -195,7 +243,7 @@ section > h2 {
         position: fixed;
         top: 0;
         margin-left: 3em;
-        background: var(--bittersweet);
+        background: var(--verdigris);
         width: 170px;
         height: 100%;
         padding-top: 50px;
@@ -203,177 +251,83 @@ section > h2 {
     .menu li {
         width: 100%;
     }
-    .menu li a, .menu li a:hover {
-        padding: 30px;
-        font-size: 18px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    .menu li a,
+    .menu li a:hover {
+    padding: 30px;
+    font-size: 18px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
 
 /* Desktop view */
-@media screen and (min-width:800px) {
-    main {
-        min-height: 850dvh;
-    }
- 
-     header > .maintitle {
-         font-size: 7vw;
-     }
-
-     .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-
+@media screen and (min-width:768px) {
+    .header {
         height: 10dvh;
-        width: 30dvw;
-     }
-
-     .contentbox {
-        background-color: var(--light-orange);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        margin: 4em;
-     }
-
-     .wrapper > .contentbox > h3 {
-        width: 35dvw;
-        padding: 1em;
-     }
-
-     .contentbox > .dateposted {
-        font-style: italic;
-        font-weight: bold;
-        position: relative;
-        font-size: 1.5vw;
-        margin-left : 9em;
-    }
-
-
-     .contentbox > p {
-        width: 45dvw;
-        font-size: 1.1em;
-     }
-
-     /* Resizing of main title */
-     .header {
-        height: 8dvh;
+        width: 100%;
     }
     
-    /* Resizing of  logo */
     .navlogo > a > img {
         width: 3dvw;
     }
 
-    /* Animation of button when hovered over with cursor in desktop view */
-    .contentbox button a:hover {
-       cursor: pointer;
-       color: black;
-       text-transform: uppercase;
+    header > h2 {
+        font-size: 5dvh;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-bottom: 2em;
     }
 
-    /* Styling + resizing of image */
-    .contentbox > .codeimg {
+    header > h3 {
+        font-size: 3dvh;
+        padding-right: 8em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    main > .content > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 16em;
+    }
+
+    main > .content > p {
+        align-items: flex-end;
+    }
+
+    main > aside > {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        margin-top: 3em;
+    }
+
+    .photo1 {
         width: 30dvw;
         height: auto;
-        border-radius: 0.5em;
-        margin-top: 2em;
+        object-fit: cover;
+        padding-left: 30em;
     }
 
-    /* Center main title */
-    header > .maintitle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Resize main subheading */
-    header > section > h2 {
-        font-size: 2vw;
-    }
-
-     /* Centre text in blog post tile */
-    .contentbox > h3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 1.5vw;
+    .photo2 {
+        width: 50dvw;
+        height: auto;
+        object-fit: cover;
     }
 }
-
-/* Container for flexbox positioning of each .contentbox in relation to the page/each other */
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
- }
-
- /* Container for flexbox styling/positioning of contents of .contentbox */
- .contentbox {
-    background-color: var(--light-orange);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2em;
-    margin-left: 2em;
-    padding: 1em;
- }
- 
- /* Styling + positioning of header within .contentbox */
-.contentbox > h3 {
-    background-color: var(--verdigris);
-    width: 60dvw;
-    height: 100%;
-    padding: 0.5em;
-    border-radius: 1em;
-    margin: 1em;
-}
-
- /* Styling + positioning of paragraph within .contentbox */
-.contentbox > p {
-    background-color: var(--light-yellow);
-    padding: 1em;
-    margin-bottom: 1em;
-}
-
-/* Styling of publish date */
-.contentbox > .dateposted {
-    font-style: italic;
-}
-
-/* All preview blog images are attributed the same class selector to apply a common theme */
-.codeimg {
-    width: 60dvw;
-    height: auto;
-}
-
-/* Button to link directing to full blog post */
-button {
-    border-color: darkorange;
-    padding: 0.5em;
-}
-
- button > a {
-    text-decoration: none;
-    color: darkorange;
-    font-weight: bold;
-    font-style: italic;
- }
 
  /* Footer styling -- will appear across all pages */
 footer {
-    background-color: var(--bittersweet);
+    background-color: var(--verdigris);
     height: 3dvh;
     width: 100%;
     text-align: center;
