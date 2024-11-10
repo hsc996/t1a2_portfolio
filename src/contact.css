@@ -1,4 +1,3 @@
-/* The colour palette + font used throughout the website has been added to the "root" selector for easy accessibility, allowing me to create a consistent theme throughout the website */
 :root {
     --cerulean: #0081a7ff;
     --verdigris: #00afb9ff;
@@ -6,15 +5,13 @@
     --light-orange: #fed9b7ff;
     --bittersweet: #f07167ff;
 
-font-family: "Rethink Sans", san-serif;
+    font-family: "Rethink Sans", sans-serif;
 }
 
-/* I've removed the margin throughout the document so I can customise as I go */
 * {
     margin: 0;
 }
 
-/* I've used the "body" selector as a parent container for flexbox styling the child elements within the main body. I've also set the background colour, which will be consistent throughout the website to promote a common theme */
 body {
     background-color: var(--light-yellow);
     display: flex;
@@ -27,7 +24,6 @@ main {
     min-height: 92dvh;
 }
 
-/* Added a margin between all elements for aesthetic value. I've used "em" as the measurement unit so that it's reponsive to the parent, allowing for a more responsive website */
 main * {
     margin: 1em;
 }
@@ -37,15 +33,12 @@ header > .maintitle {
     margin-top: 2em;
     font-size: 15vw;
     padding: 1em;
-
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
- /* Positioning and styling of main header at top of page */
 .header {
     position: relative;
     height: 5dvh;
@@ -57,6 +50,59 @@ header > .maintitle {
     padding: 0 25px;
     transition: 0.3s;
     opacity: 85%;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+.contact-form label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevent padding from overflowing */
+}
+
+.contact-form button {
+    width: 90%;
+    padding: 10px;
+    background-color: var(--cerulean);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: darkblue;
 }
 
 /* Custom logo in header */
@@ -71,7 +117,6 @@ header > .maintitle {
     padding-left: 1em;
 }
 
-/* Display/position of dropdown navigation bar in mobile view */
 .dropdown {
     display: flex;
     justify-content: space-between;
@@ -105,10 +150,9 @@ header > .maintitle {
     box-shadow: 0 -5px 0px #fff inset,
     500px 0 0 rgba(225, 225, 225, 0.1) inset;
     padding: 35px 25px 45px 25px;
-
 }
 
-/* Hamburger toggle positioning and styling for mobile view */
+/* Hamburger toggle for mobile view */
 .hamburger {
     position: relative;
     width: 30px;
@@ -175,16 +219,22 @@ header > .maintitle {
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
-/* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:767px) {
+/* Mobile view */
+@media screen and (max-width: 767px) {
     .hamburger,
     .toggle-menu {
-    display: block;
-    margin-right: 0.2em;
+        display: block;
     }
+
     .header {
-        padding:10px 20px;
+        padding: 10px 20px;
     }
+
+    .contact-container {
+        width: 90%;
+        padding: 1.5em;
+    }
+
     .menu {
         justify-content: start;
         flex-direction: column;
@@ -197,19 +247,21 @@ header > .maintitle {
         height: 100%;
         padding-top: 50px;
     }
+
     .menu li {
         width: 100%;
     }
+
     .menu li a,
     .menu li a:hover {
-    padding: 30px;
-    font-size: 18px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+        padding: 30px;
+        font-size: 18px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
 
 /* Desktop view */
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .header {
         height: 8dvh;
     }
@@ -223,24 +275,16 @@ header > .maintitle {
         margin-left: 0em;
         margin-top: 0;
     }
+}
 
-    .iconcontentrow {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-    }
-}      
-
- .contactinfo {
+.contactinfo {
     display: flex;
     flex-direction: column;
     justify-content: left;
     margin-top: 5dvh;
- }
- 
- /* Container for flexbox positioning of icons in a row */
- main > .iconcontentrow {
+}
+
+main > .iconcontentrow {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -257,7 +301,6 @@ main > .iconcontentrow > .iconpreview {
 
 .iconpreview > a > img {
     max-width: 65dvw;
-
     transition: 1s;
     height: 5dvh;
     width: auto;
@@ -271,7 +314,6 @@ main > .iconcontentrow > .iconpreview {
     padding: 0.1em 0.1em 0.1em;
 }
 
-/* Footer styling -- will appear across all pages */
 footer {
     background-color: var(--verdigris);
     height: 3dvh;

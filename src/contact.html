@@ -40,15 +40,24 @@
     </header>
         <!-- Semantic element "main" is used to identify the main body of content-->
          <main>
-            <section class="contactinfo">
-            <h3>Address</h3>
-                4/9 Anywhere Street, Any City</br>
-                Any State, Country 1234
-            <h3>Email</h3>
-                hello@portfoliosite.com
-            <h3>Phone</h3>
-            (12) 34567890
-            </section>
+            <body>
+                <div class="contact-container">
+                  <form action="/submit-form" method="POST" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+              
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+              
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+              
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+              
+                    <button type="submit">Send Message</button>
+                  </form>
+                </div>
             <!-- Semantic element "section" used to contain main content. Overriden with class selector so I can apply positioning to all icons within -->
             <section class="iconcontentrow">
                 <!-- Semantic label "section" used as a container for each icon image/link. Each of these have been attributed the same label/class selector so that I can attribute the same styling to each of them -->
