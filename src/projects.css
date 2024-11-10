@@ -172,14 +172,14 @@ header h1 {
 }
 
 /* Mobile view -- shrink header navigation to dropdown toggle hamburger bar */
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .hamburger,
     .toggle-menu {
-    display: block;
-    margin-right: 0.2em;
+        display: block;
+        margin-right: 0.2em;
     }
     .header {
-        padding:10px 20px;
+        padding: 10px 20px;
     }
     .menu {
         justify-content: start;
@@ -204,8 +204,8 @@ header h1 {
     }
 
     .modal {
-        position: absolute;
-        top : 0;
+        position: fixed;
+        top: 0;
         bottom: 0;
         right: 0;
         left: 0;
@@ -216,6 +216,7 @@ header h1 {
         transition: all 0.4s;
         visibility: hidden;
         opacity: 0;
+        padding: 0 1em; /* Added padding to avoid edge overflow */
     }
     
     .modal:target {
@@ -226,30 +227,36 @@ header h1 {
     .modalcontent {
         position: relative;
         background: #fff;
-        width: 500px;
+        width: 100%; /* Full width to fit mobile screens */
         max-width: 90%;
-        padding: 1em 2em;
+        padding: 1em;
         border-radius: 4px;
+        text-align: center;
+        overflow-y: auto;
+        max-height: 80vh; /* Prevent modal from exceeding screen height */
     }
     
-     a {
-        font-size: 21px;
-        font-weight: 600;
-    }
-    
-    .modalcontent > h1 {
+    .modal-body {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
     }
     
+    .modalcontent > h1 {
+        margin-bottom: 1em;
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+    
     .modalcontent > .modal-body > img {
-        max-width: 80%;
+        max-width: 100%; /* Responsive width */
         height: auto;
+        margin: 0 auto;
+        display: block;
     }
     
     .modalcontent > p {
-        margin: 2em;
+        margin: 1em 0;
+        font-size: 1em; /* Smaller font for better fit */
     }
     
     .modalclose {
@@ -261,6 +268,7 @@ header h1 {
         font-size: 36px;
     }
 }
+
 
 /* Desktop view */
 @media screen and (min-width: 768px) {
