@@ -48,14 +48,18 @@ header h1 {
 }
 
 /* Use of ".content" selector as flexbox container */
-main > .wrapper > .content {
-    min-width: 70dvw;
-
+.wrapper > {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.content {
+    padding: 1rem;
+    width: 600px;
+}
+
 
  /* Positioning and styling of main header at top of page */
 .header {
