@@ -225,6 +225,25 @@ header h1 {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 
+    main {
+        width: 90vw; /* Set width to 90% of viewport width */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Adjust font size for h1 title */
+    header h1 {
+        font-size: 10vw; /* Set font size to be responsive on smaller screens */
+        text-align: center;
+    }
+
+    .wrapper > .content {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        word-wrap: break-word; /* Break long words to prevent overflow */
+        text-align: center;
+    }
+
     main > .wrapper > article > img {
         width: 80vw;  /* Adjust width for better mobile responsiveness */
         height: auto;
