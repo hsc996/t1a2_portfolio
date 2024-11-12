@@ -295,36 +295,35 @@ header .maintitle {
 
 /* General Footer Styling */
 footer {
-    background-color: var(--verdigris); /* Your chosen color variable */
-    height: auto; /* Allow height to adjust based on content */
-    width: 100%; /* Full width of the viewport */
+    background-color: var(--verdigris);
+    height: auto;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 0; /* Padding added for better spacing */
+    padding: 1em 0;
 }
 
-/* Footer Text Styling */
 footer h6 {
-    margin: 0; /* Remove any default margins */
-    font-size: 1rem; /* Default font size */
+    margin: 0;
+    font-size: 1rem;
 }
 
 /* Desktop View (screens 768px and larger) */
 @media (min-width: 768px) {
     footer h6 {
-        font-size: 1.2rem; /* Slightly larger font size for desktop */
+        font-size: 1.2rem;
     }
 }
 
 /* Mobile View (screens smaller than 768px) */
 @media (max-width: 767px) {
     footer {
-        padding: 0.5em 0; /* Reduce padding for smaller screens */
+        padding: 0.5em 0;
     }
 
     footer h6 {
-        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+        font-size: 0.9rem;
     }
 }

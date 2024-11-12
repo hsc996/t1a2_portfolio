@@ -258,6 +258,10 @@ header > .maintitle {
         font-size: 18px;
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
+
+    footer {
+        padding: 0.5em 0;
+    }
 }
 
 /* Desktop view */
@@ -274,6 +278,10 @@ header > .maintitle {
         font-size: 7dvw;
         margin-left: 0em;
         margin-top: 0;
+    }
+
+    footer h6 {
+        font-size: 1.2rem;
     }
 }
 
@@ -316,10 +324,16 @@ main > .iconcontentrow > .iconpreview {
 
 footer {
     background-color: var(--verdigris);
-    height: 3dvh;
+    height: auto;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em 0;
+}
+
+footer h6 {
+    margin: 0;
+    font-size: 1rem;
 }

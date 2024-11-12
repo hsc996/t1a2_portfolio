@@ -224,6 +224,14 @@ header h1 {
     font-size: 18px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
+
+    footer {
+        padding: 0.5em 0;
+    }
+
+    footer h6 {
+        font-size: 0.9rem;
+    }
 }
 
 /* Desktop view */
@@ -264,6 +272,10 @@ header h1 {
     body > main > .wrapper > .cvlink > a:hover {
         box-shadow: 0.2em 0.2em rgba(47, 86, 86, 0.502);
     }
+
+    footer h6 {
+        font-size: 1.2rem;
+    }
 }
 
 /* Positioning + styling of main image */
@@ -303,12 +315,19 @@ main > .wrapper > .cvlink > a {
 }
 
  /* Footer styling -- will appear across all pages */
-footer {
+ footer {
     background-color: var(--verdigris);
-    height: 3dvh;
+    height: auto;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em 0;
+}
+
+/* Footer Text Styling */
+footer h6 {
+    margin: 0;
+    font-size: 1rem;
 }
