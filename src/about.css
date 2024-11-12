@@ -225,6 +225,14 @@ header h1 {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 
+    main > .wrapper > article > img {
+        width: 80vw;  /* Adjust width for better mobile responsiveness */
+        height: auto;
+        object-fit: cover;
+        margin: 0 auto; /* Horizontally center the image */
+        display: block; /* Ensure it's treated as a block-level element */
+    }
+
     footer {
         padding: 0.5em 0;
     }
